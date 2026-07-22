@@ -1,0 +1,366 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+
+/* ==========================================================================
+   MOBILE (<768px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  /* ------------------------------
+     Navbar
+  ------------------------------ */
+
+  .navbar {
+    height: 70px;
+    padding-bottom: 0;
+  }
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  /* .menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #8E52FF;
+    border-radius: 2px;
+    transition: .3s;
+  } */
+
+   .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle .bar {
+        width: 26px;
+        height: 3px;
+        margin: 3px 0;
+        background: #8E52FF;
+        border-radius: 999px;
+        transition: .3s ease;
+    }
+
+  .nav-container .menu {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    width: 100%;
+    background: #F5F3FF;
+    border-bottom: 1px solid #DDD6FF;
+    z-index: 999;
+  }
+
+  .nav-container .menu.open {
+    display: block;
+  }
+
+  .nav-container .menu ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(142,82,255,.05);
+  }
+
+  .active-link {
+    width: 100%;
+    font-weight: 600;
+    background: #EDE9FE;
+  }
+
+  .active-link::after {
+    display: none;
+  }
+
+  /* ------------------------------
+     Hero
+  ------------------------------ */
+
+  #hero-section {
+    margin-top: 140px;
+    padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #hero-section .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .product-gallery-side,
+  .hero-content,
+  .product-details-side {
+    width: 100%;
+  }
+
+  .product-gallery-side {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content,
+  .product-details-side {
+    text-align: center;
+  }
+
+  .main-image-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+
+  .main-image-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-product-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .product-description-text {
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  /* ------------------------------
+     Badges & Pricing
+  ------------------------------ */
+
+  .top-status-badges,
+  .pricing-area-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-status-badges {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .status-tag {
+    padding: 4px 12px;
+    font-size: .75rem;
+  }
+
+  .pricing-area-block {
+    gap: 12px;
+  }
+
+  .current-price {
+    font-size: 1.8rem;
+  }
+
+  .installment-plan-text {
+    margin-bottom: 24px;
+  }
+
+  /* ------------------------------
+     Buttons
+  ------------------------------ */
+
+  .action-buttons-group {
+    width: 100%;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .primary-cart-btn,
+  .secondary-wishlist-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: .95rem;
+  }
+
+  /* ------------------------------
+     Reviews
+  ------------------------------ */
+
+  .reviews-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .rating-summary-sidebar,
+  .reviews-list-container {
+    width: 100%;
+  }
+
+  .rating-summary-sidebar {
+    position: static;
+  }
+
+  .individual-review-card {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  /* ------------------------------
+     Products
+  ------------------------------ */
+
+  .products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ------------------------------
+     Footer
+  ------------------------------ */
+
+  .footer-top-container,
+  .footer-bottom-bar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-top-container {
+    gap: 32px;
+  }
+
+  .footer-bottom-bar {
+    gap: 20px;
+  }
+
+  /* ------------------------------
+     Comparison Table
+  ------------------------------ */
+
+  .table-responsive-wrapper{
+        margin:20px 0;
+        background:#fff;
+    }
+
+    .comparison-table{
+        min-width:700px;
+    }
+
+    .comparison-table th,
+    .comparison-table td{
+        padding:12px;
+        font-size:.9rem;
+    }
+
+    .comparison-table img{
+        width:50px;
+        height:auto;
+    }
+
+
+}
+
+
+/* ==========================================================================
+   TABLET (<1024px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+
+  .products-grid {
+    gap: 16px;
+  }
+
+  .product-card {
+    min-width: 45%;
+  }
+
+  .hero-container {
+    gap: 32px;
+  }
+
+  .main-product-title {
+    font-size: 2.5rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   LAPTOP (<1280px)
+   ========================================================================== */
+
+@media (max-width: 1279px) {
+
+  .nav-container,
+  .hero-container,
+  .reviews-section-container,
+  .products-grid,
+  .footer-top-container {
+    padding-inline: 24px;
+  }
+
+}
+
+
+/* ==========================================================================
+   DESKTOP (<1536px)
+   ========================================================================== */
+
+@media (max-width: 1535px) {
+
+  .nav-container,
+  .hero-container,
+  .reviews-section-container,
+  .products-grid,
+  .footer-top-container {
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+
+}
