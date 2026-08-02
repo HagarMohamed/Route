@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background-color: #f3f4f6;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; }
+
+
+
+
+
+
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* السايدبار في اليمين والمحتوى في اليسار تلقائياً بالـ RTL */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* --- تنسيق الـ Sidebar الأيمن --- */
+.sidebar-wrapper {
+  background-color: #ffffff;
+  border-left: 1px solid #e2e8f0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sidebar-logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon-blue { width: 42px; height: 42px; background-color: #3b82f6; color: #ffffff; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; }
+.logo-txt-group h2 { font-size: 1.3rem; font-weight: 800; color: #0f172a; }
+.logo-txt-group p { font-size: 0.75rem; color: #64748b; font-weight: 500; }
+
+.sidebar-menu { display: flex; flex-direction: column; gap: 6px; }
+.menu-item { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; color: #475569; transition: all 0.2s; }
+.menu-item i { font-size: 1.1rem; color: #94a3b8; }
+.menu-item.active { background-color: #eff6ff; color: #3b82f6; }
+.menu-item.active i { color: #3b82f6; }
+.menu-item:hover:not(.active) { background-color: #f8fafc; color: #0f172a; }
+
+.quick-actions-section h3 { font-size: 0.8rem; color: #94a3b8; margin-bottom: 14px; font-weight: 700; }
+.action-link-row { margin-bottom: 10px; }
+.action-btn-item { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; font-weight: 600; color: #334155; }
+.action-icon-container { width: 32px; height: 32px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 0.85rem; }
+.bg-light-blue { background-color: #e0f2fe; color: #0369a1; }
+.bg-light-green { background-color: #dcfce7; color: #15803d; }
+
