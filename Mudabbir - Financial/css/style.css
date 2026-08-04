@@ -30,7 +30,7 @@ button {
 
 
 
-.dashboard-layout {
+.dashboard-global-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
   height: 100vh;
@@ -40,11 +40,19 @@ button {
 /* --- Right Sidebar Style --- */
 .sidebar-wrapper {
   background-color: #ffffff;
-  border-left: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0; /* خط فاصل جهة اليسار للتوافق مع RTL */
   padding: 32px 24px;
+  height: 100%;
+}
+
+.main-body-content {
+  height: 100%;
+  overflow-y: auto; /* السماح للمحتويات اليسارية فقط بالتمرير لأسفل بنقاء */
   display: flex;
-  flex-direction: column;
-  gap: 36px;
+  flex-direction: column; /* ترتيب القطع (الهيدر ثم الكروت) عمودياً تحت بعضها */
+  gap: 24px; /* مسافة فاصلة ثابتة ومنظمة بين الأقسام */
+  padding-bottom: 40px; /* مسافة أمان سفلية مريحة */
+  background-color: #f8fafc; /* خلفية ناعمة تبرز بياض الكروت فوقها */
 }
 
 .sidebar-logo {
@@ -87,6 +95,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-top: 14px;
 }
 
 .menu-item {
@@ -372,3 +381,348 @@ button {
 }
 
 /****************End Header styles*****************/
+
+
+/****************Cards Section styles*****************/
+
+.stats-grid-container {
+  display: grid;
+  /* ⚡ قوة الـ Grid: توزيع الكروت الثلاثة بجانب بعضها بالتساوي بنسبة 100% */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 24px; /* مسافة فاصلة ومريحة بين الكروت لمنع الازدحام البصري */
+  width: 95%;
+  padding: 10px 24px; /* حشوة جانبية متناسقة ومحاذية لبطاقة الهيدر العلوية */
+}
+
+/* التنسيق الهندسي الدقيق للكرت المالي الفردي في الـ Desktop */
+.stat-financial-card {
+  background-color: #ffffff; /* خلفية بيضاء ناصعة تبرز الكرت فوق خلفية الموقع الرمادية */
+  border: 1px solid #f6f3f4; /* إطار رقيق وخفيف جداً يحيط بحواف الكرت */
+  border-radius: 16px; /* حواف دائرية ناعمة ومطابقة تماماً للصورة */
+  padding: 28px 24px; /* مساحات داخلية فاخرة تمنح الأرقام مظهراً مريحاً للعين */
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.01); /* ظل ناعم للغاية يكاد يكون غير ملحوظ */
+  /* ترتيب العناصر الداخلية عمودياً تحت بعضها */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* محاذاة العناصر الداخلية لجهة اليسار لتوافق RTL */
+}
+
+/* تنسيق العناوين العلوية الباهتة (الرصيد الحالي، الدخل، المصروفات) */
+.stat-card-label {
+  font-size: 0.9rem;
+  color: #64748b; /* لون رمادي هادئ ومناسب للبيانات الثانوية */
+  font-weight: 600;
+  margin-bottom: 12px; /* مسافة تفصل العنوان عن الرقم المالي */
+}
+
+/* تنسيق الأرقام الضخمة الداكنة وعملة الجنيه */
+.stat-card-amount {
+  font-size: 2.2rem; /* حجم خط ضخم ومميز للأرقام الأساسية في الشاشات الكبيرة */
+  font-weight: 800; /* سمك خط عريض جداً لإبراز القيم المادية */
+  color: #0f172a; /* لون داكن نقي */
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* مسافة تفصل الرقم عن كلمة جنيه */
+}
+
+/* كلمة جنيه تظهر بحجم أصغر قليلاً من الأرقام لجمالية التنسيق وبناء هوية الـ Fintech */
+.currency-txt {
+  font-size: 1.6rem; 
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* تنسيق نسب النمو الفرعية السفلية */
+.stat-card-percentage {
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+/* الألوان الدلالية الذكية للنسب والأسهم بحسب حالة المال بالصورة */
+.text-green {
+  color: #16a34a; /* أخضر صريح وواضح للنمو والدخل الإيجابي */
+}
+
+.text-red {
+  color: #dc2626; /* أحمر صريح للمصروفات والنسب السلبية */
+}
+
+.arrow-icon {
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+
+
+
+
+
+/******************End Cards Section styles*******************/
+
+
+
+
+/* ==========================================================================
+   تنسيق شبكة البيانات السفلية للشاشات الكبيرة (Data Grid Desktop Layout)
+   ========================================================================== */
+
+/* الحاوية الكبرى التي تجمع كرت الجدول وكرت الأنشطة جنباً إلى جنب */
+.dashboard-data-grid {
+  display: grid;
+  /* ⚡ توزيع ميزاني محكم: كرت الجدول يأخذ ثلثي المساحة (2fr) وكرت الأنشطة يأخذ الثلث المتبقي (1fr) */
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  padding: 0 24px; /* حشوة جانبية ثابتة تحاذي كروت الهيدر والإحصائيات العلوية تماماً */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* التنسيق المشترك الفاخر لكروت لوحة التحكم */
+.dashboard-card {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-main-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.view-all-link {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.view-all-link:hover { color: #155dfc; }
+
+/* --------------------------------------------------------------------------
+   🔷 تفاصيل وتنسيق جدول المعاملات الأخيرة (Recent Transactions Table)
+   -------------------------------------------------------------------------- */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.recent-transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right; /* محاذاة النصوص لليمين للتوافق مع التصفح العربي RTL */
+}
+
+/* تنسيق ترويسة وعناوين الجدول */
+.recent-transactions-table th {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  border-bottom: 1px solid #f8fafc;
+}
+
+/* تنسيق خلايا الأسطر والمسافات البينية النظيفة */
+.recent-transactions-table td {
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #334155;
+  border-bottom: 1px solid #f8fafc;
+  vertical-align: middle;
+}
+
+.recent-transactions-table tr:last-child td {
+  border-bottom: none; /* تصفير الإطار لآخر سطر في الجدول لجمالية المظهر */
+}
+
+/* محاذاة خلية المستخدم والأيقونة بجانب النصوص بالفليكس الداخلي */
+.user-meta-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cell-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* الدوائر البديلة للصور الشخصية الملونة بحسب نوع المعاملة بالصورة */
+.cell-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.orange-theme { background-color: #fff7ed; }
+.blue-theme { background-color: #eff6ff; }
+
+.cell-txt h4 { font-size: 0.9rem; font-weight: 700; color: #0f172a; margin: 0 0 2px 0; }
+.cell-txt p { font-size: 0.75rem; color: #64748b; margin: 0; font-weight: 500; }
+
+/* أزرار وشارات تصنيفات الفئات الملونة الباهتة */
+.badge-category {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+.bg-soft-green  { background-color: #f0fdf4; }
+.bg-soft-orange { background-color: #fff7ed; }
+.bg-soft-blue   { background-color: #eff6ff; }
+.bg-soft-purple { background-color: #faf5ff; }
+
+.text-green  { color: #16a34a; }
+.text-orange { color: #ea580c; }
+.text-blue   { color: #2563eb; }
+.text-purple { color: #9333ea; }
+
+/* شارة حالة المعاملة (مكتمل) باللون الأخضر الناعم الدائري */
+.status-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.state-completed {
+  background-color: #e6fcf5;
+  color: #0ca678;
+}
+
+/* تنسيق نصوص وأرقام المبالغ المالية */
+.amount-text {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+.text-dark { color: #0f172a; }
+
+/* --------------------------------------------------------------------------
+   🔷 تفاصيل وتنسيق لوحة الأنشطة الحديثة الجانبية (Recent Activities)
+   -------------------------------------------------------------------------- */
+.activities-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* تنسيق كرت النشاط الفردي ذو الشريط الجانبي الملون الممتد بالصورة */
+.activity-brutal-row {
+  background-color: #f8fafc; /* خلفية الكرت الرمادية الفاتحة المصمتة */
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between; /* دفع النصوص لليمين والأيقونة الدائرية لليسار */
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  
+  /* تفعيل خط الحافة الجانبي الممتد الملون المميز لبطاقات الأنشطة بالصورة */
+  border-right: 4px solid transparent; 
+}
+
+/* تخصيص ألوان أشرطة التحديد الجانبية بحسب نوع النشاط (حساب أم بطاقة) */
+.stroke-blue  { border-right-color: #155dfc; }
+.stroke-green { border-right-color: #10b981; }
+
+.activity-left-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+}
+
+/* الكلمات التعريفية الصغيرة (حساب، بطاقة) الملونة أعلى النشاط */
+.activity-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.activity-left-txt h4 { font-size: 0.9rem; font-weight: 700; color: #0f172a; margin: 0 0 4px 0; }
+.activity-left-txt p { font-size: 0.75rem; color: #64748b; font-weight: 500; margin: 0 0 8px 0; line-height: 1.4; }
+.time-stamp-text { font-size: 0.7rem; color: #94a3b8; font-weight: 600; }
+
+/* الدوائر الصغيرة الحاضنة لأيقونات الأنشطة أقصى اليسار */
+.activity-right-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.icon-blue-bg  { background-color: #e0f2fe; color: #155dfc; }
+.icon-green-bg { background-color: #dcfce7; color: #10b981; }
+
+/* زر عرض جميع الأنشطة الموحد في أسفل الكرت الجانبي */
+.view-all-activities-btn {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #155dfc; /* خط أزرق مميز للماركة */
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #eff4f8;
+  
+  /* ترانزيشن لتنعيم ميزة الـ Grow الحركية والظل الفاخر الموحد */
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s;
+}
+
+.view-all-activities-btn:hover {
+  background-color: #eff6ff;
+  transform: scale(1.02); /* تأثير نمو خفيف بنسبة 2% عند تمرير الفأرة */
+}
+.view-all-activities-btn:active { transform: scale(0.98); }
+
+
+/* ==========================================================================
+   3. شاشات التجاوب والتحول للهواتف المحمولة (Media Query - أقل من 768px)
+   ========================================================================== */
+@media not all and (min-width: 768px) {
+  /* تحويل الأعمدة الثنائية لتتكدس عمودياً بالكامل في الموبايل */
+  .dashboard-data-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
+  }
+}
+
+
+
+
+
+
+
