@@ -1,0 +1,398 @@
+/*
+ *
+ * Breakpoints:
+ *   Desktop : >= 1025px  -> existing full sidebar
+ *   Tablet  : 768-1024px -> compact icon-only sidebar
+ *   Mobile  : < 768px    -> sidebar hidden, content full width
+ * ------------------------------------------------------------
+ */
+
+/* ============================================================
+   BASE SAFETY
+   ============================================================ */
+
+.dashboard-global-layout {
+  width: 100%;
+  min-width: 0;
+}
+
+.main-body-content,
+.dashboard-data-grid,
+.dashboard-analytics-grid,
+.stats-grid-container {
+  min-width: 0;
+}
+
+.main-body-content > *,
+.dashboard-data-grid > *,
+.dashboard-analytics-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* ============================================================
+   TABLET: 768px - 1024px
+   Sidebar stays visible as an icon-only rail.
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* 72px icon rail + remaining content */
+  .dashboard-global-layout {
+    grid-template-columns: 72px minmax(0, 1fr);
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  /* Compact sidebar */
+  .sidebar-wrapper {
+    width: 72px;
+    min-width: 72px;
+    padding: 20px 10px;
+    overflow-x: hidden;
+  }
+
+  /* Keep logo icon, hide logo text */
+  .sidebar-logo {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .logo-txt-group {
+    display: none;
+  }
+
+  .logo-icon-blue {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  /* Navigation becomes icon-only */
+  .sidebar-menu {
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .sidebar-menu li {
+    width: 100%;
+  }
+
+  .menu-item {
+    width: 52px;
+    height: 52px;
+    margin-inline: auto;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    font-size: 0;
+  }
+
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  /* Quick actions: icon-only */
+  .quick-actions-section {
+    margin-top: 24px;
+  }
+
+  .quick-actions-section h3 {
+    display: none;
+  }
+
+  .action-link-row {
+    margin-bottom: 10px;
+  }
+
+  .action-btn-item {
+    width: 52px;
+    height: 52px;
+    margin-inline: auto;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    font-size: 0;
+  }
+
+  .action-icon-container {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  /* Main content must be allowed to shrink inside grid */
+  .main-body-content {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .dashboard-header-main {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .header-content-wrapper {
+    min-width: 0;
+    padding: 0 16px;
+  }
+
+  /* Prevent header groups from forcing horizontal overflow */
+  .header-brand-badge,
+  .header-actions-group {
+    min-width: 0;
+  }
+
+  .badge-text-group {
+    min-width: 0;
+  }
+
+  /* Keep analytics usable on tablet */
+  .dashboard-analytics-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .dashboard-data-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  /* Three stat cards can remain in a row when space permits */
+  .stats-grid-container {
+    width: 100%;
+    padding: 10px 16px;
+    gap: 16px;
+  }
+
+  /* Tables scroll inside their own container */
+  .table-responsive-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .recent-transactions-table {
+    min-width: 650px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE: < 768px
+   Sidebar disappears and content becomes full-width.
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* One-column page: no 280px sidebar column */
+  .dashboard-global-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  /* Hide sidebar completely */
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  /* Main content owns the complete viewport width */
+  .main-body-content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    gap: 16px;
+    padding-bottom: 24px;
+  }
+
+  /* ---------------- Header ---------------- */
+
+  .dashboard-header-main {
+    width: 100%;
+    height: auto;
+    padding: 0 12px;
+    margin-top: 12px;
+  }
+
+  .header-content-wrapper {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 72px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+
+  .header-brand-badge {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .badge-icon-box {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .badge-text-group {
+    min-width: 0;
+  }
+
+  .badge-text-group h3 {
+    font-size: 0.9rem;
+  }
+
+  .badge-text-group p {
+    font-size: 0.65rem;
+  }
+
+  .connection-status {
+    display: none;
+  }
+
+  .header-actions-group {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .control-circle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .control-svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Prevent the profile block from making the header overflow */
+  .user-profile-card {
+    min-width: 0;
+  }
+
+  .user-info-text {
+    display: none;
+  }
+
+  .user-avatar-img {
+    flex-shrink: 0;
+  }
+
+  /* ---------------- Financial cards ---------------- */
+
+  .stats-grid-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .stat-financial-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* ---------------- Data sections ---------------- */
+
+  .dashboard-data-grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .dashboard-analytics-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .dashboard-card,
+  .analytics-card,
+  .brutal-sidebar-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* ---------------- Tables ---------------- */
+
+  .table-responsive-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .recent-transactions-table {
+    min-width: 650px;
+  }
+
+  /* ---------------- Long content protection ---------------- */
+
+  .card-main-title,
+  .details-action-link,
+  .view-all-link {
+    max-width: 100%;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES: <= 480px
+   Extra protection for narrow devices.
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .dashboard-header-main {
+    padding: 0 10px;
+  }
+
+  .header-content-wrapper {
+    padding: 10px;
+  }
+
+  .badge-text-group {
+    display: none;
+  }
+
+  .header-actions-group {
+    gap: 5px;
+  }
+
+  .control-circle-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .stats-grid-container,
+  .dashboard-data-grid,
+  .dashboard-analytics-grid {
+    padding-inline: 10px;
+  }
+}

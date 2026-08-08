@@ -9,6 +9,7 @@ body {
   width: 100%;
   background-color: #f3f4f6;
   font-family: "IBM Plex Sans Arabic", sans-serif;
+  overflow-x: hidden; /* منع التمرير الأفقي غير المرغوب فيه */
 }
 
 
@@ -479,7 +480,6 @@ button {
   gap: 24px;
   padding: 0 24px; /* حشوة جانبية ثابتة تحاذي كروت الهيدر والإحصائيات العلوية تماماً */
   width: 100%;
-  box-sizing: border-box;
 }
 
 /* التنسيق المشترك الفاخر لكروت لوحة التحكم */
@@ -513,7 +513,6 @@ button {
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 4px;
 }
 .view-all-link:hover { color: #155dfc; }
 
@@ -542,8 +541,9 @@ button {
 
 /* تنسيق خلايا الأسطر والمسافات البينية النظيفة */
 .recent-transactions-table td {
-  padding: 16px;
-  font-size: 0.9rem;
+  padding: 10px;
+  font-size: 0.75rem;
+    font-weight: 500;
   color: #334155;
   border-bottom: 1px solid #f8fafc;
   vertical-align: middle;
@@ -580,8 +580,8 @@ button {
 .orange-theme { background-color: #fff7ed; }
 .blue-theme { background-color: #eff6ff; }
 
-.cell-txt h4 { font-size: 0.9rem; font-weight: 700; color: #0f172a; margin: 0 0 2px 0; }
-.cell-txt p { font-size: 0.75rem; color: #64748b; margin: 0; font-weight: 500; }
+.cell-txt h4 { font-size: 0.9rem; color: #101828; margin: 0 0 2px 0; }
+.cell-txt p { font-size: 0.75rem; color: #6a7282; margin: 0; font-weight: 500; }
 
 /* أزرار وشارات تصنيفات الفئات الملونة الباهتة */
 .badge-category {
@@ -610,14 +610,13 @@ button {
   border-radius: 20px;
 }
 .state-completed {
-  background-color: #e6fcf5;
-  color: #0ca678;
+    background-color: #dcfce7;
+    color: #016630;
 }
 
 /* تنسيق نصوص وأرقام المبالغ المالية */
 .amount-text {
-  font-size: 0.95rem;
-  font-weight: 800;
+  font-size: 0.9rem;
 }
 .text-dark { color: #0f172a; }
 
@@ -636,7 +635,7 @@ button {
 .activity-brutal-row {
   background-color: #f8fafc; /* خلفية الكرت الرمادية الفاتحة المصمتة */
   border-radius: 14px;
-  padding: 16px 20px;
+  padding: 16px 12px;
   display: flex;
   justify-content: space-between; /* دفع النصوص لليمين والأيقونة الدائرية لليسار */
   align-items: center;
@@ -644,18 +643,19 @@ button {
   width: 100%;
   
   /* تفعيل خط الحافة الجانبي الممتد الملون المميز لبطاقات الأنشطة بالصورة */
-  border-right: 4px solid transparent; 
+  border-left: 4px solid transparent; 
 }
 
 /* تخصيص ألوان أشرطة التحديد الجانبية بحسب نوع النشاط (حساب أم بطاقة) */
-.stroke-blue  { border-right-color: #155dfc; }
-.stroke-green { border-right-color: #10b981; }
+.stroke-blue  { border-left-color: #155dfc; }
+.stroke-green { border-left-color: #10b981; }
 
 .activity-left-txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: right;
+  margin-right: 10px; /* مسافة فاصلة بين النصوص وأيقونة النشاط الدائرية */
 }
 
 /* الكلمات التعريفية الصغيرة (حساب، بطاقة) الملونة أعلى النشاط */
@@ -680,7 +680,16 @@ button {
   align-items: center;
   font-size: 0.95rem;
   flex-shrink: 0;
+  align-self: flex-start;
 }
+
+.activity-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+
 .icon-blue-bg  { background-color: #e0f2fe; color: #155dfc; }
 .icon-green-bg { background-color: #dcfce7; color: #10b981; }
 
@@ -708,21 +717,553 @@ button {
 .view-all-activities-btn:active { transform: scale(0.98); }
 
 
-/* ==========================================================================
-   3. شاشات التجاوب والتحول للهواتف المحمولة (Media Query - أقل من 768px)
-   ========================================================================== */
-@media not all and (min-width: 768px) {
-  /* تحويل الأعمدة الثنائية لتتكدس عمودياً بالكامل في الموبايل */
-  .dashboard-data-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-    padding: 0 16px;
-  }
+
+
+
+
+
+
+
+.brutal-sidebar-card {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01);
+  box-sizing: border-box;
 }
 
 
+.card-title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-main-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.view-all-link {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.arrow-angle { font-size: 0.8rem; font-weight: 900; }
+ -------------------------------------------------------------------------- */
+.total-bills-summary { text-align: center; margin-bottom: 24px; }
+.total-bills-summary h2 { font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+.total-bills-summary p { font-size: 0.85rem; color: #64748b; font-weight: 600; margin: 0; }
+
+.bills-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* شبكة 2×2 للبطاقات الصغيرة */
+  gap: 16px;
+}
+
+.bill-mini-box {
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 18px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bill-icon-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1rem; margin-bottom: 12px; }
+.bg-light-yellow { background-color: #fef9c3; } .text-dark-yellow { color: #ca8a04; }
+.bg-light-blue   { background-color: #dbeafe; } .text-dark-blue   { color: #2563eb; }
+.bg-light-red    { background-color: #fee2e2; } .text-dark-red    { color: #dc2626; }
+.bg-light-green  { background-color: #dcfce7; } .text-dark-green  { color: #16a34a; }
+
+.bill-mini-box h4 { font-size: 0.85rem; font-weight: 700; color: #64748b; margin: 0 0 4px 0; }
+.bill-amount { font-size: 1.1rem; font-weight: 800; color: #0f172a; margin: 0 0 6px 0; }
+.bill-status { font-size: 0.75rem; font-weight: 700; }
 
 
 
 
 
+
+
+
+
+/* ==========================================================================
+   تنسيق شبكة البيانات والتحليلات الكبرى للشاشات الكبيرة (Analytics Desktop Grid)
+   ========================================================================== */
+
+/* الحاوية الكبرى المقسمة بالـ CSS Grid الشامل لثلاثة أعمدة متوازية بالتساوي */
+.dashboard-analytics-grid {
+  display: grid;
+  /* ⚡ قوة الـ Grid: تقسيم المساحة الأفقية المتاحة إلى 3 أعمدة متساوية تماماً بنسبة 100% */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.analytics-column-center {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* التنسيق الرئيسي الموحد لكروت التحليلات الفاخرة */
+.analytics-card {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 24px; /* حواف دائرية ناعمة ومطابقة تماماً للصورة */
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01);
+  box-sizing: border-box;
+}
+
+.payment-methods-grand-card {
+  background-color: transparent !important; /* إلغاء الخلفيات والحدود الزائدة لتصطف الكروت بحرية كالصورة */
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.card-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-main-title { font-size: 1.15rem; font-weight: 800; color: #0f172a; }
+.details-action-link { font-size: 0.85rem; color: #94a3b8; font-weight: 700; }
+.details-action-link:hover { color: #155dfc; }
+
+/* --------------------------------------------------------------------------
+   🔷 تفاصيل وتنسيق كرت الميزانيات وأشرطة التقدم (Column 1)
+   -------------------------------------------------------------------------- */
+.main-budget-summary-box { text-align: center; margin-bottom: 28px; background-color: #f8fafc; padding: 20px; border-radius: 20px; }
+.lbl-muted { font-size: 0.8rem; color: #64748b; font-weight: 600; display: block; margin-bottom: 4px; }
+.val-bold { font-size: 1.8rem; font-weight: 800; color: #155dfc; margin: 0 0 12px 0; }
+.budget-balance-row { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+.progress-bar-bg-main { width: 100%; height: 10px; background-color: #eff6ff; border-radius: 5px; overflow: hidden; margin-bottom: 4px; }
+.progress-bar-fill-main { height: 100%; border-radius: 5px; }
+.bg-brand-blue { background-color: #155dfc; }
+.percentage-sub-text { font-size: 0.75rem; color: #94a3b8; font-weight: 700; }
+
+/* بنود الميزانية الفرعية الطولية */
+.budget-category-row-item {
+  background: rgba(249, 250, 251, 0.5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(229, 231, 235, 0.8);
+    border-image: none;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: box-shadow 0.3s, scale 0.3s;
+   margin-bottom: 20px;
+   }
+
+   .budget-category-row-item:hover {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    scale: 1.05;
+   }
+
+
+.category-item-meta-top { display: flex; align-items: center; font-size: 0.85rem; margin-bottom: 8px; width: 100%; }
+.cat-icon-square { width: 32px; height: 32px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 1rem; margin-left: 12px; }
+.bg-soft-orange { background-color: #fff7ed; }
+.bg-soft-red    { background-color: #fef2f2; }
+.bg-soft-pink   { background-color: #fdf2f8; }
+
+.cat-text-group { flex-grow: 1; text-align: right; }
+.cat-text-group h4 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin: 0 0 2px 0; }
+.cat-text-group p { font-size: 0.75rem; color: #64748b; font-weight: 500; margin: 0; }
+
+.cat-status-badge { font-size: 0.9rem; font-weight: 800; text-align: left; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.sub-badge-p { font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; background-color: #fff7ed; color: #ea580c; border: 1px solid #ffedd5; }
+.badge-red-bg-p { background-color: #fef2f2; color: #ef4444; border-color: #fee2e2; }
+.badge-pink-bg-p { background-color: #fdf2f8; color: #db2777; border-color: #fbcfe8; }
+
+.category-bar-bg { width: 100%; height: 6px; background-color: #f1f5f9; border-radius: 3px; overflow: hidden; }
+.category-bar-fill { height: 100%; border-radius: 3px; }
+.bg-orange { background-color: #f97316; } .text-orange { color: #f97316; }
+.bg-red    { background-color: #ef4444; } .text-red    { color: #ef4444; }
+.bg-pink   { background-color: #ec4899; } .text-pink   { color: #ec4899; }
+
+/* --------------------------------------------------------------------------
+   🔷 تنسيق كرت الرسم البياني وملخص الحسابات (Column 2)
+   -------------------------------------------------------------------------- */
+.chart-legend-indicators { display: flex; gap: 14px; font-size: 0.8rem; font-weight: 700; color: #64748b; }
+.legend-item { display: flex; align-items: center; gap: 4px; }
+.dot-lg { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.bg-green-dot { background-color: #10b981; }
+.bg-red-dot   { background-color: #ef4444; }
+
+.brutal-bars-chart-container { height: 170px; display: flex; justify-content: space-around; align-items: flex-end; width: 100%; margin-top: 24px; padding-bottom: 8px; }
+.chart-column-week { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.double-bars-wrapper { display: flex; gap: 6px; align-items: flex-end; height: 120px; width: 26px; }
+.bar-fill-element { width: 10px; border-radius: 4px 4px 0 0; }
+.bg-green-bar { background-color: #10b981; }
+.bg-red-bar   { background-color: #ef4444; }
+.week-label-text { font-size: 0.75rem; color: #64748b; font-weight: 600; }
+
+/* ملخص الحسابات البنكية */
+.bank-row-item-meta { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #f8fafc; }
+.bank-row-item-meta:last-child { border-bottom: none; }
+.bank-info-right-side { display: flex; align-items: center; gap: 14px; }
+.bank-icon-rounded { width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.1rem; }
+.theme-blue-bank  { background-color: #eff6ff; color: #155dfc; }
+.theme-green-bank { background-color: #f0fdf4; color: #10b981; }
+.theme-purple-bank { background-color: #faf5ff; color: #a855f7; }
+
+.bank-title-grp h4 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin: 0 0 2px 0; }
+.bank-title-grp p { font-size: 0.75rem; color: #64748b; margin: 0; font-weight: 500; }
+.bank-amount-val { font-size: 1rem; font-weight: 800; color: #0f172a; }
+
+/* --------------------------------------------------------------------------
+   🔷 تنسيق بطاقات الدفع الائتمانية الفاخرة ثلاثية الأبعاد (Column 3)
+   -------------------------------------------------------------------------- */
+.brutal-credit-card {
+  border-radius: 20px;
+  padding: 24px;
+  color: #ffffff;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 145px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* الألوان المتدرجة ثلاثية الأبعاد الفاخرة والمطابقة للصورة بدقة */
+.gradient-purple-cc { background: linear-gradient(135deg, #31108f, #581cbf); }
+.gradient-red-cc    { background: linear-gradient(135deg, #800a1d, #c91432); }
+.gradient-blue-cc   { background: linear-gradient(135deg, #0e2970, #1546bd); height: 115px; }
+
+.cc-header-row { display: flex; justify-content: space-between; align-items: center; }
+.cc-status-badge { font-size: 0.7rem; background-color: rgba(255,255,255,0.18); padding: 3px 10px; border-radius: 6px; font-weight: 700; letter-spacing: 0.5px; }
+.cc-brand-name-logo { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.5px; }
+.cc-brand-name-logo-pp { font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+
+.cc-secure-number-mask { font-size: 1.15rem; font-weight: 700; letter-spacing: 2px; margin: 14px 0; text-align: center; }
+.cc-secure-number-mask-pp { font-size: 1.2rem; font-weight: 800; margin: 10px 0 0 0; text-align: right; padding-right: 8px; }
+
+.cc-footer-row { display: flex; justify-content: space-between; text-align: right; }
+.cc-meta-holder h5, .cc-meta-expiry h5 { font-size: 0.65rem; opacity: 0.7; font-weight: 600; margin-bottom: 3px; letter-spacing: 0.3px; }
+.cc-meta-holder p, .cc-meta-expiry p { font-size: 0.85rem; font-weight: 700; margin: 0; }
+.cc-footer-row-pp { text-align: right; padding-right: 8px; }
+.pp-info-txt h5 { font-size: 0.65rem; opacity: 0.7; font-weight: 600; margin-bottom: 2px; }
+.pp-info-txt p { font-size: 0.85rem; font-weight: 700; margin: 0; opacity: 0.95; }
+
+/* محاكاة الدوائر المتداخلة لـ Mastercard بالـ CSS الصرف للواقعية البصرية */
+.cc-circles-m-logo { width: 14px; height: 14px; background-color: #ff5f00; border-radius: 50%; position: relative; display: inline-block; }
+.cc-circles-m-logo::after { content: ""; width: 14px; height: 14px; background-color: #eb001b; border-radius: 50%; position: absolute; right: 9px; top: 0; opacity: 0.85; }
+
+
+
+
+
+
+
+ .payment-methods-stack-container {
+      width: 100%;
+      max-width: 360px; /* تحديد عرض متناسق للعمود الجانبي للبطاقات */
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* تنسيق ترويسة وعناوين القسم */
+    .card-section-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 0 8px;
+    }
+
+    .card-main-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .details-action-link {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .details-action-link:hover {
+      color: #155dfc;
+    }
+
+    /* ==========================================================================
+       2. هندسة الأنيميشن التفاعلي ثلاثي الأبعاد (3D Architecture)
+       ========================================================================== */
+    
+    /* المشهد البصري: يمنح عمقاً بؤرياً للمتصفح ليظهر التأثير ثلاثي الأبعاد للأمام */
+    .brutal-card-3d-viewport {
+      width: 100%;
+      height: 145px;
+      perspective: 1000px; 
+      margin-bottom: 20px;
+    }
+
+    /* المحرك الحركي الداخلي الذي يحمل الوجهين ويقوم بالدوران الفعلي */
+    .credit-card-inner-rotator {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d; /* الحفاظ على الأبعاد العميقة للأبناء بالداخل */
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* دوران ارتدادي فاخر */
+    }
+
+    /* تفعيل الدوران بمقدار 180 درجة حول المحور الرأسي (Y) عند تمرير الفأرة فوق الـ viewport */
+    .brutal-card-3d-viewport:hover .credit-card-inner-rotator {
+      transform: rotateY(180deg);
+    }
+
+    /* التنسيق المشترك الفخم لوجهي البطاقات (الأمامي والخلفي) */
+    .cc-face-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      padding: 24px;
+      color: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+      backface-visibility: hidden; /* إخفاء الوجه المعاكس المقلوب لحماية نظافة الحركة */
+    }
+
+    /* التدرجات اللونية ثلاثية الأبعاد الفاخرة للبطاقات من واقع الصورة */
+    .gradient-purple-cc { background: linear-gradient(135deg, #31108f, #581cbf); }
+    .gradient-red-cc    { background: linear-gradient(135deg, #800a1d, #c91432); }
+    .gradient-blue-cc   { background: linear-gradient(135deg, #193cb8, #1546bd); }
+
+    /* ==========================================================================
+       3. تفاصيل الوجوه الأمامية للبطاقات (Front Faces)
+       ========================================================================== */
+    .cc-front-side {
+      z-index: 2; /* بقاء الوجه الأمامي في المقدمة افتراضياً */
+      transform: rotateY(0deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cc-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cc-status-badge {
+      font-size: 0.7rem;
+      background-color: rgba(255, 255, 255, 0.18);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    /* بناء الشريحة الذكية الذهبية والفضية بـ CSS الصرف */
+    .cc-sim-chip {
+      width: 28px;
+      height: 22px;
+      background: linear-gradient(135deg, #facc15, #eab308);
+      border-radius: 4px;
+      position: relative;
+      margin-right: auto; /* دفعها لجهة اليسار */
+    }
+    .cc-sim-chip::after {
+      content: "";
+      position: absolute;
+      top: 4px; left: 6px; right: 6px; bottom: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+    }
+    .chip-silver {
+      background: linear-gradient(135deg, #e2e8f0, #94a3b8) !important;
+    }
+
+    .cc-brand-name-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    /* محاكاة دوائر Mastercard المتداخلة */
+    .cc-circles-m-logo {
+      width: 14px;
+      height: 14px;
+      background-color: #ff5f00;
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+    }
+    .cc-circles-m-logo::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: #eb001b;
+      border-radius: 50%;
+      position: absolute;
+      right: 9px;
+      top: 0;
+      opacity: 0.85;
+    }
+
+    /* تنسيق أرقام البطاقات المقنعة */
+    .cc-secure-number-mask {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 14px 0;
+      text-align: center;
+    }
+
+    .cc-footer-row {
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+    }
+
+    .cc-meta-holder h5, .cc-meta-expiry h5 {
+      font-size: 0.65rem;
+      opacity: 0.7;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .cc-meta-holder p, .cc-meta-expiry p {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       4. تفاصيل الوجوه الخلفية الواقعية للبطاقات (Back Faces)
+       ========================================================================== */
+    .cc-back-side {
+      transform: rotateY(180deg); /* البدء بوضعية مقلوبة لتستقيم عند دوران الأب */
+      padding: 0; /* تصفير الحشوة لتمدد الشريط الأسود */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cc-magnetic-strip {
+      width: 100%;
+      height: 32px;
+      background-color: #0f172a; /* شريط مغناطيسي داكن صلب */
+      margin-top: 16px;
+    }
+
+    .cc-signature-cvv-area {
+      margin: 16px 24px 0 24px;
+      display: flex;
+      align-items: center;
+      height: 26px;
+    }
+
+    .cc-signature-white-lines {
+      flex-grow: 1;
+      height: 100%;
+      background-color: #f1f5f9;
+      background-image: repeating-linear-gradient(45deg, #e2e8f0, #e2e8f0 2px, transparent 2px, transparent 4px);
+    }
+
+    .cc-cvv-box-code {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Courier New', Courier, monospace; /* خط ماكينات الصراف الآلي الحاد */
+      font-size: 0.85rem;
+      font-weight: 800;
+      font-style: italic;
+      padding: 4px 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .cc-back-footer {
+      margin: auto 24px 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .cc-back-disclaimer {
+      font-size: 0.55rem;
+      opacity: 0.5;
+      font-weight: 500;
+      max-width: 75%;
+      line-height: 1.3;
+      text-align: right;
+    }
+
+    .cc-hologram-silver {
+      width: 26px;
+      height: 22px;
+      background: linear-gradient(135deg, #cbd5e1, #94a3b8, #e2e8f0);
+      border-radius: 4px;
+      opacity: 0.8;
+    }
+
+    /* ==========================================================================
+       5. تنسيق كرت حساب PayPal الثابت والمسطح
+       ========================================================================== */
+    .brutal-paypal-flat-card {
+      border-radius: 20px;
+      padding: 24px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 115px; /* مقاس أقصر متناسق كما بالصورة المرجعية */
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .cc-brand-name-logo-pp {
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cc-secure-number-mask-pp {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 10px 0 0 0;
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    .cc-footer-row-pp {
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    .pp-info-txt h5 {
+      font-size: 0.65rem;
+      opacity: 0.7;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .pp-info-txt p {
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0.95;
+    }
