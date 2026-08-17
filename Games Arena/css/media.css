@@ -1,0 +1,150 @@
+ /* =========================
+           DESKTOP - 992px+
+        ========================= */
+
+ @media (min-width: 992px) {
+
+     /*NAVBAR*/
+
+     .navbar {
+         height: 75px;
+         padding: 0;
+     }
+
+     .navbar-brand {
+         font-size: 20px;
+         font-family: 'Chakra Petch', sans-serif;
+         gap: 14px;
+     }
+
+     .brand-icon {
+         width: 35px;
+         height: 20px;
+     }
+
+     .navbar-nav {
+         margin-top: 0;
+         margin-left: 25px;
+         gap: 8px;
+     }
+
+     .navbar-nav .nav-link {
+         font-size: 16px;
+         padding: 10px 16px !important;
+     }
+
+     .header-right {
+         flex-direction: row;
+         margin-top: 0;
+         margin-left: auto;
+         gap: 0px;
+     }
+
+     .header-icon {
+         font-size: 16px;
+     }
+
+     .header-icon .notifacation,
+     .header-icon .messages {
+         display: none;
+     }
+
+     .signin-btn {
+         font-size: 16px;
+         padding: 12px 24px;
+         margin-left: 10px;
+     }
+
+     /**Hero Section**/
+
+     .ga-hero-section {
+    min-height: calc(100vh - 40px); 
+    padding-top: 40px !important;
+  }
+
+  .ga-hero-main-title {
+    font-size: 3.8rem; 
+
+  .ga-hero-description {
+    font-size: 1rem;
+    margin: 0; 
+  }
+
+  .ga-hero-btn-group {
+    flex-direction: row; 
+  }
+
+     
+    /***Our Latest Games***/
+
+    .ga-games-section {
+    padding: 100px 0; /* مسافات عمودية واسعة وفخمة للحواسب */
+  }
+
+  .ga-main-heading {
+    font-size: 3rem; /* تضخيم عنوان الميزات الرئيسي ليناسب الـ Desktop */
+  }
+
+  .ga-game-card {
+    max-width: 100%; /* السماح للكروت بالتمدد بالتساوي وبحرية كاملة داخل أعمدة البوتستراب الثلاثة */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /******Footer***********/
+  .ga-footer {
+        padding: 80px 0 40px 0;
+    }
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Larger desktop */
+
+ @media (min-width: 1200px) {
+
+    /*Hero Section*/
+
+     .hero-title {
+         font-size: 60px;
+         line-height: 75px;
+         font-weight: 700;
+         text-align: left;   
+     }
+
+     .hero-description {
+         font-size: 16px;
+         text-align: left;
+     }
+
+     .hero-image {
+         height: 535px;
+     }
+ }
