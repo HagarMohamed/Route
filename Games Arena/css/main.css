@@ -6,6 +6,8 @@
     --ga-text-white: #F1F1F1;
     --ga-text-muted: #A2A4A7;
     --ga-btn-hover: #CAFF49;
+    --font-one: 'Days One', sans-serif;
+    --font-two: 'Chakra Petch', sans-serif;
 }
 
 /* (Reset Style) */
@@ -23,6 +25,7 @@ body {
     background-color: var(--ga-bg-dark);
     color: var(--ga-text-white);
     overflow-x: hidden;
+    
 }
 
 a {
@@ -44,7 +47,7 @@ ul {
     background: #0b0f13 ;
     border-bottom: 1px solid #1c2025;
     padding: 16px 0;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: var(--font-two);
   backdrop-filter: blur(10px);
   background-color: rgba(15, 17, 21, 0.92) ;
 }
@@ -163,7 +166,7 @@ ul {
 
 .ga-hero-main-title {
   font-size: 2.5rem; 
-  font-family: 'Days One', sans-serif;
+  font-family: var(--font-one);
   font-weight: 900;
   color: var(--ga-text-white);
   line-height: 1.2;
@@ -177,7 +180,7 @@ ul {
 
 
 .ga-hero-description {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: var(--font-two);
   font-size: 0.95rem;
   color: #cbd5e1;
   line-height: 1.6;
@@ -189,7 +192,7 @@ ul {
 
 .ga-hero-primary-btn {
   background-color: var(--ga-primary-neon);
-  font-family: 'Chakra Petch', sans-serif;;
+  font-family: var(--font-two);
   color: #000000 !important; 
   font-size: 0.9rem;
   font-weight: 800;
@@ -218,7 +221,7 @@ ul {
 
 .ga-hero-secondary-btn {
   background-color: transparent;
-  font-family: 'Chakra Petch', sans-serif;;
+  font-family: var(--font-two);
   color: var(--ga-primary-neon);
   font-size: 0.9rem;
   font-weight: 800;
@@ -279,7 +282,7 @@ ul {
   text-align: left;
 }
 .badge-stats-txt .lbl-muted {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: var(--font-two);
   font-size: 0.75rem;
   color: var(--ga-text-muted);
   font-weight: bold;
@@ -287,20 +290,12 @@ ul {
   margin-bottom: 2px;
 }
 .badge-stats-txt .num-bold {
-  font-family: 'Chakra Petch', sans-serif;;
+  font-family: var(--font-two);
   font-size: 1.2rem;
   font-weight: 900;
   color: var(--ga-text-white);
   letter-spacing: 0.5px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -321,20 +316,17 @@ ul {
 
 
 
-
-/* ==========================================================================
-   تنسيق قسم الألعاب الافتراضي (Mobile & Tablet - المقاس الأصغر)
-   ========================================================================== */
 .ga-games-section {
     background-color: var(--ga-bg-dark);
-    padding: 60px 0;
+    padding: 90px 0;
     width: 100%;
 }
 
-/* التنسيق الجمالي للعنوان العلوِي الخطوط المتوازية الصامتة */
+
 .ga-sub-badge-title {
     color: var(--ga-primary-neon);
-    font-size: 0.8rem;
+    font-family: var(--font-two);
+    font-size: 1rem;
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -348,24 +340,23 @@ ul {
 }
 
 .ga-main-heading {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    font-family: var(--font-one);
     font-weight: 900;
     color: var(--ga-text-white);
     letter-spacing: -0.5px;
 }
 
-/* تنسيق كرت اللعبة الفردي وزواياه البيضاوية الفاخرة */
+
 .ga-game-card {
     width: 100%;
     max-width: 380px;
-    /* تحديد مقاس متناسق للكرت الفردي في الموبايل */
     margin: 0 auto;
 }
 
 .card-img-wrapper {
     width: 100%;
     border-radius: 20px;
-    /* زوايا دائرية ناعمة جداً تطابق صورتك بدقة */
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.02);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -378,24 +369,23 @@ ul {
     display: block;
 }
 
-/* إضافة تأثير تكبير ونمو حركي خفيف على كرت اللعبة عند التمرير بالماوس */
+
 .ga-game-card:hover .card-img-wrapper {
     transform: scale(1.02);
 }
 
-/* --- تنسيق حزمة أزرار التحكم والتحريك بالأسفل --- */
+
 .ga-carousel-controls-row {
     margin-top: 40px !important;
 }
 
-/* الأزرار الدائرية الداكنة المخصصة للأسهم (Twitter/Dashboard Style) */
+
 .ga-arrow-btn {
     width: 44px;
     height: 44px;
     background-color: transparent;
     color: var(--ga-text-muted);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    /* إطار رمادي دقيق محيط بالدائرة */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -407,24 +397,21 @@ ul {
 
 .ga-arrow-btn:hover {
     color: var(--ga-primary-neon);
-    /* يضيء السهم باللون الفسفوري عند التمرير فوقه */
     border-color: var(--ga-primary-neon);
     background-color: rgba(204, 255, 51, 0.02);
 }
 
-/* زر عرض جميع الألعاب المفرغ المخصص بالإطار الفسفوري اللامع كالصورة */
+
 .ga-view-all-btn {
     background-color: transparent;
     color: var(--ga-primary-neon);
+    font-family: var(--font-two);
     font-size: 0.8rem;
     font-weight: 800;
     padding: 12px 28px;
     border: 2px solid var(--ga-primary-neon);
-    /* الخط الفسفوري المحيط بالزر */
     border-radius: 10px;
-    /* حواف دائرية ناعمة متناسقة مع البار */
     letter-spacing: 0.5px;
-    /* دمج تأثير النمو الحركي المطور (Grow Transition) */
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
         background-color 0.2s,
         color 0.2s;
@@ -432,11 +419,8 @@ ul {
 
 .ga-view-all-btn:hover {
     background-color: var(--ga-primary-neon);
-    /* يمتلئ باللون الفسفوري الخالص عند الـ Hover */
     color: #000000;
-    /* ينعكس لون الخط للأسود المصمت ليظهر بوضوح فاخر */
     transform: scale(1.05);
-    /* تمدد ونمو سلس للزر بنسبة 5% */
 }
 
 .ga-view-all-btn:active {
@@ -454,9 +438,7 @@ ul {
 
 /******What We Do Style***********/
 
-/* ==========================================================================
-   تنسيق قسم الخدمات الافتراضي (Mobile First Layout)
-   ========================================================================== */
+
 .ga-services-section {
     background-color: var(--ga-bg-dark);
     padding: 60px 0;
@@ -465,55 +447,96 @@ ul {
 
 .text-neon {
     color: var(--ga-primary-neon);
-    /* تلوين كلمة Interactive بالفسفوري */
 }
 
-/* التنسيق العام والمشترك لكروت الخدمات الهندسية */
+
 .ga-service-card {
     width: 100%;
     max-width: 320px;
-    height: 240px;
-    /* تحديد ارتفاع مربع ثابت لجميع الكروت ليصطفوا بدقة هندسية */
+    height: 200px;
     margin: 0 auto;
     border-radius: 20px;
-    /* زوايا منحنية ناعمة مطابقة للصورة تماماً */
     padding: 40px 24px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    border: 2px solid transparent; 
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
 }
 
-/* 1. تنسيق الكروت الداكنة العادية المستقرة بالخلف */
+.ga-service-card::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 24px; 
+  width: 28px;
+  height: 28px;
+  background-color: var(--ga-primary-neon); 
+   clip-path: polygon(0 0, 100% 0, 0 100%); 
+  opacity: 0; 
+  transform: translate(-10px, -10px); 
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.ga-service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  right: 24px; 
+  width: 28px;
+  height: 28px;
+  background-color: var(--ga-primary-neon);
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+  opacity: 0; 
+  transform: translate(10px, 10px);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.ga-service-card:hover {
+  transform:  translateY(-4px); 
+  border-color: var(--ga-primary-neon); 
+  box-shadow: 0 15px 35px rgba(204, 255, 51, 0.08), 
+              inset 0 0 15px rgba(204, 255, 51, 0.03);
+}
+
+.ga-service-card:hover::before {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.ga-service-card:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
 .card-dark-theme {
     background-color: #161920;
-    /* لون صندوق داكن يفصل الكروت عن خلفية الموقع الكبرى */
     border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-/* 2. ⚡ تنسيق كروت التميز الفسفورية النيون الصاخبة المتواجدة بالصورة */
+
 .card-neon-theme {
     background-color: var(--ga-primary-neon);
-    /* لون نيون فوسفوري كامل للخلفية */
     padding: 0;
-    /* تصفير الحشوة لتتمدد الصور ثلاثية الأبعاد بداخل الكرت بحرية */
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(204, 255, 51, 0.12);
-    /* هالة ضوئية نيون تحيط بالكرت */
 }
 
-/* ضبط ومحاذاة صور أذرع التحكم والشخصيات المجسمة لتملأ كروت النيون */
+
 .service-featured-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* تجعل الصورة تملأ المربع بالكامل بنقاء */
     display: block;
 }
 
-/* الصناديق الصغيرة الحاضنة للأيقونات الملونة وتوهجها الفاخر الظاهر بالصورة */
 .service-icon-box {
     width: 52px;
     height: 52px;
@@ -525,7 +548,7 @@ ul {
     margin-bottom: 24px;
 }
 
-/* محاكاة التلوين الهوائي للأيقونات وتأثير الـ Glow المريح جداً للعين بالخلف */
+
 .box-blue-glow {
     background-color: rgba(37, 99, 235, 0.1);
     color: #3b82f6;
@@ -556,8 +579,9 @@ ul {
     color: #16a34a;
 }
 
-/* تنسيق خطوط عناوين الخدمات البيضاء */
+
 .service-card-title {
+    font-family: var(--font-one);
     font-size: 1.05rem;
     font-weight: 800;
     color: var(--ga-text-white);
@@ -566,197 +590,290 @@ ul {
     letter-spacing: 0.3px;
 }
 
-/* تغيير لون نصوص كروت النيون تلقائياً للأسود لتظهر بوضوح فوق الفسفوري */
+
 .card-neon-theme .service-card-title {
     color: #000000;
 }
 
-/* تأثير حركة النمو الارتدادية الفاخرة للبطاقات عند التمرير بالماوس Hover */
-.ga-service-card:hover {
-    transform: scale(1.05) translateY(-5px);
-    /* ترتفع وتتمدد البطاقة بنسبة 5% */
-}
+
 
 .card-dark-theme:hover {
     border-color: var(--ga-primary-neon);
-    /* يضيء إطار الكرت الداكن بالفسفوري عند الـ Hover */
     box-shadow: 0 10px 25px rgba(204, 255, 51, 0.03);
 }
 
 
-/* ==========================================================================
-   الشاشات المكتبية وحواسيب الـ Desktop الكبيرة (min-width: 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-    .ga-services-section {
-        padding: 100px 0;
-    }
-
-    .ga-main-heading {
-        font-size: 3rem;
-        /* تضخيم ترويسة العنوان المزدوج لراحة العين بالحواسب */
-    }
-
-    .ga-service-card {
-        max-width: 100%;
-        /* السماح لجميع الكروت بالتراص الهندسي المتساوي بنسبة 100% داخل شبكة بوتستراب */
-    }
-}
 
 
 
 
-/* ==========================================================================
-   تنسيق شريط الشعارات التفاعلي التلقائي التحريك (Infinite Logo Marquee)
-   ========================================================================== */
+/****8Infinite Logo Marquee*******/
 
-/* بناء الخط الفسفوري المضيء الفاصل الممتد بالكامل */
-.ga-neon-glow-line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--ga-primary-neon);
-    box-shadow: 0 0 15px var(--ga-primary-neon), 0 0 5px var(--ga-primary-neon);
-    /* تأثير التوهج المضيء النيون */
-    border-radius: 2px;
-    opacity: 0.8;
-}
 
-/* حاوية العرض المخفية للأطراف لحماية الموبايل من التصفح العرضي */
-.ga-marquee-wrapper {
+.ga-marquee-section-wrapper {
+    position: relative;
     width: 100%;
     overflow: hidden;
-    /* إخفاء الكروت الخارجة عن إطار الشاشة */
-    position: relative;
+
+    padding: 55px 0 70px !important;
 }
+
+
+/* =========================================
+   MAIN OVAL NEON LIGHT
+   ========================================= */
+
+.ga-marquee-section-wrapper::before {
+    content: "";
+
+    position: absolute;
+    z-index: 0;
+
+    /*
+       IMPORTANT:
+       Very wide + short = screenshot's oval
+    */
+    left: 50%;
+    top: 55%;
+
+    width: 1050px;
+    height: 300px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse 55% 45% at center,
+
+            rgba(190, 255, 55, 0.78) 0%,
+
+            rgba(165, 230, 45, 0.62) 18%,
+
+            rgba(130, 190, 35, 0.45) 35%,
+
+            rgba(90, 140, 25, 0.25) 52%,
+
+            rgba(50, 80, 20, 0.10) 68%,
+
+            transparent 82%
+        );
+
+    filter: blur(28px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BIG SOFT OUTER OVAL
+   ========================================= */
+
+.ga-marquee-section-wrapper::after {
+    content: "";
+
+    position: absolute;
+    z-index: 0;
+
+    left: 50%;
+    top: 55%;
+
+    width: 1450px;
+    height: 350px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse 55% 42% at center,
+
+            rgba(120, 180, 30, 0.28) 0%,
+
+            rgba(95, 145, 25, 0.18) 30%,
+
+            rgba(60, 100, 20, 0.10) 50%,
+
+            transparent 75%
+        );
+
+    filter: blur(45px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TOP NEON LINE
+   ========================================= */
+
+.ga-top-neon-glow-bar {
+    width: 50%;
+    margin: 0 auto;
+  height: 2px; 
+  background-color: var(--ga-primary-neon); 
+  
+  box-shadow: 0 0 12px 2px rgba(204, 255, 51, 0.7), 
+              0 0 24px 6px rgba(204, 255, 51, 0.3),
+              0 0 4px 1px #ffffff; 
+  
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
+  
+  
+}
+
+
+/* glow immediately underneath the line */
+
+.ga-top-neon-glow-bar::after {
+    content: "";
+
+    position: absolute;
+
+    left: -100px;
+    right: -100px;
+    top: -25px;
+
+    height: 50px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(165, 255, 45, .22),
+            transparent 70%
+        );
+
+    filter: blur(12px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   MARQUEE
+   ========================================= */
+
+.ga-marquee-mask-container {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    overflow: hidden;
+
+    margin-top: 80px !important;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 2%,
+        black 98%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 2%,
+        black 98%,
+        transparent 100%
+    );
+}
+
+
+/* =========================================
+   TRACK
+   ========================================= */
 
 .ga-marquee-track {
-    width: 100%;
+    width: max-content;
     display: flex;
-    overflow: hidden;
 }
 
 .ga-marquee-content-container {
+    width: max-content;
+
     display: flex;
-    white-space: nowrap;
-    /* إجبار كروت الماركي على الاصطفاف على خط أفقي واحد */
+    align-items: center;
+
+    gap: 22px !important;
 }
 
-/* 📱 تنسيق الكرت الفردي الصغير في وضع شاشات الموبايل (ظهور شعارين فقط بالسطر أفقياً) */
+
+/* =========================================
+   CARDS
+   ========================================= */
+
 .ga-logo-marquee-card {
-    /* ⚡ في الموبايل: حساب مساحة الكرت بدقة ليعرض حقلين كاملين متناسقين بالـ Gap */
-    width: 100px;
-    height: 100px;
-    background-color: #12141c;
-    /* خلفية الصناديق الداكنة المخصصة للشعارات كالصورة */
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    border-radius: 14px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    /* منع انكماش أو صغر الكروت أثناء التحريك */
-    box-sizing: border-box;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    position: relative;
+
+    flex: 0 0 100px;
+
+    width: 140px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #111a2c;
 }
 
 .ga-logo-marquee-card img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 15px;
-    object-fit: contain;
-    /* حماية جودة وأبعاد الشعارات من التشويه */
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 16px;
 }
 
-/* الكروت المميزة المضيئة بالإطار النيون الفسفوري الظاهرة بالمنتصف */
-.active-neon-border {
-    border-color: var(--ga-primary-neon) !important;
-    box-shadow: inset 0 0 10px rgba(204, 255, 51, 0.05), 0 4px 15px rgba(204, 255, 51, 0.05);
+
+/* =========================================
+   ROW GAP
+   ========================================= */
+
+.ga-marquee-track.mb-4 {
+    margin-bottom: 22px !important;
 }
 
-.ga-logo-marquee-card:hover {
-    transform: scale(1.04);
-    border-color: rgba(255, 255, 255, 0.1);
+
+/* =========================================
+   MOVEMENT
+   ========================================= */
+
+.tracking-forward {
+    animation: marqueeForward 35s linear infinite;
 }
 
-/* --------------------------------==========================================
-   ⚡ محرك الأنيميشن السحري للتمرير اللانهائي المستمر (Infinite CSS Keyframes)
-   --------------------------------========================================== */
-
-/* الصف الأول: يتحرك للأمام بسلاسة */
-.tracking-forward .ga-marquee-content-container {
-    animation: scrollForward 25s linear infinite;
-    /* يستغرق 25 ثانية لفة كاملة دائرية */
+.tracking-backward {
+    animation: marqueeBackward 35s linear infinite;
 }
 
-/* الصف الثاني السفلي: يتحرك بشكل معاكس ليعطي حيوية بصرية للمنصة */
-.tracking-backward .ga-marquee-content-container {
-    animation: scrollBackward 25s linear infinite;
-}
-
-/* إيقاف الأنيميشن مؤقتاً بنعومة عندما يضع اللاعب مؤشر الماوس فوق أي شعار */
-.ga-marquee-track:hover .ga-marquee-content-container {
-    animation-play-state: paused;
-}
-
-@keyframes scrollForward {
-    0% {
+@keyframes marqueeForward {
+    from {
         transform: translateX(0);
     }
 
-    100% {
+    to {
         transform: translateX(-50%);
     }
-
-    /* التحرك بمقدار النصف للوصول للتكرار المتطابق */
 }
 
-@keyframes scrollBackward {
-    0% {
+@keyframes marqueeBackward {
+    from {
         transform: translateX(-50%);
     }
 
-    100% {
+    to {
         transform: translateX(0);
     }
 }
 
 
-/* ==========================================================================
-   الشاشات المكتبية وحواسيب الـ Desktop الكبيرة (min-width: 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-
-    /* تضخيم وتوسيع أحجام كروت الماركي في الحواسب لتظهر كـ شريط ممتد واسع */
-    .ga-logo-marquee-card {
-        width: 100px;
-        /* مقاس ثابت ومنظم للشعارات في الـ Desktop كالتصميم */
-        height: 110px;
-        padding: 0px;
-        border-radius: 16px;
-    }
-
-    /* تسريع حركة الشريط في الشاشات الكبيرة لتبدو انسيابية */
-    .tracking-forward .ga-marquee-content-container {
-        animation-duration: 35s;
-    }
-
-    .tracking-backward .ga-marquee-content-container {
-        animation-duration: 35s;
-    }
-}
 
 
 
-
-
-
-
-
-
-
-
-
+/***********End What We Do Style************/
 
 
 
@@ -766,9 +883,7 @@ ul {
 
 /***********Our Team Style***********/
 
-/* ==========================================================================
-   تنسيق قسم فريق العمل الافتراضي (Mobile First Layout)
-   ========================================================================== */
+
 .ga-team-section {
     background-color: var(--ga-bg-dark);
     padding: 60px 0;
@@ -777,141 +892,144 @@ ul {
 
 .ga-section-subtitle {
     color: var(--ga-text-muted);
-    font-size: 1rem;
+    font-family: var(--font-two);
+    font-size: 1.2rem;
     font-weight: 500;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* التنسيق الهيكلي لبطاقة العضو المحاطة بالـ Gradient الناعم والتدرج السينمائي */
+
 .ga-team-card {
-    width: 100%;
-    max-width: 290px;
-    height: 380px;
-    /* الارتفاع الطولي المثالي للبطاقة كالصورة تماماً */
-    margin: 0 auto;
-    border-radius: 20px;
-    /* زوايا منحنية ناعمة ومطابقة للواجهة */
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    background-color: #13161c;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 100%;
+  max-width: 290px;
+  height: 380px; /* الارتفاع الطولي المربع الظاهر بصورتك بدقة */
+  margin: 0 auto;
+  border-radius: 20px; /* الحواف الدائرية الناعمة للكروت الموضحة بالصورة */
+  background-color: #13161c;
+  cursor: pointer;
+  
+  /* تأمين تفعيل ميزة التسريع الرسومي with-change لحركة انسيابية فائقة */
+  will-change: transform;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.team-img-dual-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .team-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(40%) contrast(110%);
-    /* إضفاء مظهر سينمائي رياضي غامق خفيف */
-    transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* الطبقة التظليلية السفلية (Overlay Gradient) لحماية قراءة النصوص البيضاء */
+.img-gray-base {
+  filter: grayscale(100%) contrast(110%);
+  z-index: 1;
+}
+
+.img-color-fluid {
+  z-index: 2; /* تقف فوق الصورة الرمادية مباشرة */
+  
+  /* 💡 السر الهندسي الأول: قص وإخفاء الصورة الملونة بالكامل من الأعلى لأسفل،
+        الأبعاد (100% 0 0 0) تعني: قص الصورة بالكامل من الأعلى واحبس المتبقي الملون في القاع (0% مساحة) */
+  clip-path: inset(100% 0 0 0); 
+  
+  will-change: clip-path;
+  /* حركة صعود خط القص للأعلى بنعومة بالغة وانسيابية تستغرق نصف ثانية */
+  transition: clip-path 0.6s  cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+
 .card-overlay-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 24px 20px;
-    background: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.6) 60%, transparent 100%);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 20px;
+  
+  /* تظليل أسود متلاشي للأعلى يحمي الكلمات في الحالة العادية والـ Hover كالصورة المرفقة */
+  background: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 50%, transparent 100%);
+  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 4;
 }
 
-/* تنسيق الأسماء والأسماء المستعيرة المقتبسة النيون */
+.ga-team-card:hover .img-color-fluid {
+  clip-path: inset(0% 0 0 0); /* الصورة الملونة تنكشف بالكامل للأعلى */
+}
+
+/* تمدد وبروز كرت اللاعب بالكامل للأمام بنسبة 2% لجمالية التصفح */
+.ga-team-card:hover {
+  border-color: var(--ga-primary-neon); /* إطار نيون فسفوري يضيء أطراف الكرت */
+  box-shadow: 0 12px 30px rgba(204, 255, 51, 0.04);
+}
+
 .member-name {
-    font-size: 1.15rem;
-    font-weight: 800;
+    font-family: var(--font-one);
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--ga-text-white);
     line-height: 1.3;
     margin: 0 0 8px 0;
     letter-spacing: 0.3px;
 }
 
-.member-name .nickname {
-    color: var(--ga-primary-neon);
-    /* تمييز الاسم المستعار بين علامات الاقتباس بالفسفوري المضيء */
-}
 
 .member-role {
-    font-size: 0.8rem;
-    color: var(--ga-text-white);
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-two);
+    color: #cbfe1c;
+    font-weight: 400;
     margin: 0 0 2px 0;
     opacity: 0.9;
 }
 
 .member-sub-info {
-    font-size: 0.75rem;
-    color: var(--ga-text-muted);
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-family: var(--font-two);
+    color: #99a1af;
+    font-weight: 400;
     margin: 0;
 }
 
-/* ⚡ السحر البرمجي: تدوير وطباعة النص بشكل عمودي رأسي على حافة الكرت الجانبية */
+
 .side-vertical-text {
     position: absolute;
     bottom: 24px;
     right: 16px;
-    /* يرتكز في أقصى اليسار البصري للـ LTR */
     font-size: 0.85rem;
     font-weight: 900;
     color: var(--ga-text-white);
     opacity: 0.15;
-    /* جعل الكلمة شبه شفافة وخلفية تجميلية تماماً كالصورة المرجعية */
     letter-spacing: 2px;
-
-    /* تفعيل خاصية النص العمودي من الأعلى للأسفل */
     writing-mode: vertical-rl;
     text-transform: uppercase;
     user-select: none;
     transition: opacity 0.3s ease, color 0.3s ease;
 }
 
-/* تأثيرات حركية فائقة الحيوية عند تمرير الفأرة Hover */
-.ga-team-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    /* يرتفع الكرت قليلاً وينمو للأمام */
-    border-color: var(--ga-primary-neon);
-    /* يضيء الإطار باللون الفسفوري النيون */
-    box-shadow: 0 15px 35px rgba(204, 255, 51, 0.05);
-}
-
-.ga-team-card:hover .team-img {
-    filter: grayscale(0%) contrast(100%);
-    /* عودة ألوان صورة اللاعب الطبيعية عند الـ Hover */
-}
-
-.ga-team-card:hover .side-vertical-text {
-    opacity: 0.8;
-    /* يضيء النص العمودي الجانبي ويصبح واضحاً وتفاعلياً */
-    color: var(--ga-primary-neon);
-    /* يتحول للون الفسفوري الصاخب */
+.side-vertical-text:hover{
+    color: var(--ga-btn-hover);
 }
 
 
-/* ==========================================================================
-   الشاشات المكتبية وحواسيب الـ Desktop الكبيرة (min-width: 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-    .ga-team-section {
-        padding: 100px 0;
-    }
 
-    .ga-main-heading {
-        font-size: 3rem;
-    }
+/*===============End Our Team Style=============================== */
 
-    .ga-team-card {
-        max-width: 100%;
-        /* تمدد الكروت هندسياً بنسبة 100% لتملأ أعمدة شبكة البوتستراب الأربعة بالتساوي */
-    }
-}
+
 
 
 
@@ -920,18 +1038,16 @@ ul {
 
 /*********Get In Touch Style ********/
 
-/* ==========================================================================
-   تنسيق قسم الاتصال والدعم الفني الافتراضي (Mobile First Layout)
-   ========================================================================== */
+
 .ga-contact-section {
-    background-color: var(--ga-bg-dark);
-    padding: 60px 0;
+    background-color: #0F1420;
+    padding: 80px 0;
     width: 100%;
 }
 
 /* --- تنسيق الكروت الجانبية اليسرى الداكنة --- */
 .ga-info-brutal-card {
-    background-color: #151922;
+    background-color: #1E2939;
     /* لون صندوق داكن يفصل الأقسام كالصورة تماماً */
     border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 16px;
@@ -958,15 +1074,16 @@ ul {
 }
 
 .info-card-txt h4 {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
+    font-family: var(--font-one);
     font-weight: 800;
     color: var(--ga-text-white);
     margin: 0 0 4px 0;
 }
 
 .info-card-txt p {
-    font-family: Arial, sans-serif;
-    font-size: 0.85rem;
+    font-family: var(--font-two);
+    font-size: 1rem;
     color: var(--ga-text-muted);
     margin: 0;
     font-weight: 500;
@@ -985,7 +1102,7 @@ ul {
 
 .ga-community-green-card h3 {
     color: #000000;
-    /* نص أسود غليظ يبرز فوق الخلفية المضيئة */
+   font-family: var(--font-one);
     font-size: 1.5rem;
     font-weight: 900;
     margin: 0 0 8px 0;
@@ -993,7 +1110,7 @@ ul {
 }
 
 .ga-community-green-card p {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     color: #042f1a;
     /* لون زيتي داكن ناعم ومقروء */
     font-size: 0.9rem;
@@ -1007,7 +1124,7 @@ ul {
     height: 40px;
     background-color: #000000;
     /* لون أسود مصمت */
-    color: #ffffff;
+    color: var(--ga-primary-neon);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1024,7 +1141,7 @@ ul {
 
 /* --- تنسيق كرت استمارة المراسلة الكبيرة اليمنى --- */
 .ga-form-brutal-card {
-    background-color: #131720;
+    background-color: #1E2939;
     border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 20px;
     padding: 32px 24px;
@@ -1034,13 +1151,15 @@ ul {
 }
 
 .form-main-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-family: var(--font-one);
     font-weight: 800;
     color: var(--ga-text-white);
 }
 
 .ga-form-label {
-    font-size: 0.85rem;
+    font-size: 0.87rem;
+    font-family: var(--font-two);
     font-weight: 700;
     color: var(--ga-text-white);
     margin-bottom: 8px;
@@ -1053,14 +1172,14 @@ ul {
 .ga-brutal-select,
 .ga-brutal-textarea {
     width: 100%;
-    background-color: #1d222e;
+    background-color: #364153;
     /* خلفية حقول داكنة ومطابقة تماماً للصورة المرجعية */
     border: 1px solid #2a3142;
     /* خط إطار رمادي دقيق */
     border-radius: 8px;
     padding: 12px 16px;
     color: var(--ga-text-white);
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     font-size: 0.9rem;
     font-weight: bold;
     outline: none;
@@ -1070,7 +1189,7 @@ ul {
 
 .ga-brutal-input::placeholder,
 .ga-brutal-textarea::placeholder {
-    color: #4b5563;
+    color: #f1f1f19d;
     /* لون تلميح الحقول الرمادي الهادئ */
     font-weight: bold;
 }
@@ -1093,7 +1212,7 @@ ul {
 }
 
 .ga-checkbox-label {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     font-size: 0.85rem;
     color: var(--ga-text-muted);
     font-weight: bold;
@@ -1109,7 +1228,7 @@ ul {
     /* نص أسود خالص ليبرز بوضوح */
     border: none;
     padding: 14px;
-    font-family: inherit;
+    font-family: var(--font-two);
     font-size: 0.95rem;
     font-weight: 800;
     border-radius: 12px;
@@ -1141,6 +1260,7 @@ ul {
 
 .stat-num {
     font-size: 1.6rem;
+    font-family: var(--font-two);
     font-weight: 900;
     margin: 0 0 4px 0;
     letter-spacing: -0.5px;
@@ -1153,33 +1273,12 @@ ul {
 /* لون أصفر ذهبي لعداد المتاحة */
 
 .stat-desc {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     font-size: 0.75rem;
     color: var(--ga-text-muted);
     font-weight: bold;
     margin: 0;
 }
-
-
-/* ==========================================================================
-   الشاشات المكتبية وحواسيب الـ Desktop الكبيرة (min-width: 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-    .ga-contact-section {
-        padding: 100px 0;
-    }
-
-    .ga-main-heading {
-        font-size: 3rem;
-    }
-
-    .ga-form-brutal-card {
-        padding: 40px;
-        /* مساحات وحشوات داخلية فاخرة للحواسب */
-    }
-}
-
-
 
 
 
@@ -1197,6 +1296,7 @@ ul {
 .ga-footer {
     background-color: #000;
     width: 100%;
+    padding: 70px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.02);
     
 }
@@ -1209,6 +1309,7 @@ ul {
 
 .footer-logo-text-neon {
     font-size: 1.3rem;
+    font-family: var(--font-two);
     font-weight: 800;
     color: var(--ga-primary-neon);
     /* كلمة Game بالفسفوري */
@@ -1223,8 +1324,8 @@ ul {
 
 
 .footer-brand-desc {
-    font-family: Arial, sans-serif;
-    font-size: 0.9rem;
+    font-family: var(--font-two);
+    font-size: 0.96rem;
     color: var(--ga-text-muted);
     line-height: 1.6;
     max-width: 280px;
@@ -1246,7 +1347,8 @@ ul {
 
 .footer-column-heading {
     color: var(--ga-text-white);
-    font-size: 1.1rem;
+    font-family: var(--font-one);
+    font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: -0.3px;
 }
@@ -1263,7 +1365,7 @@ ul {
 }
 
 .footer-links-menu li a {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     color: var(--ga-text-muted);
     font-size: 0.9rem;
     font-weight: bold;

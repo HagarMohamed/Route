@@ -1,3 +1,75 @@
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .ga-marquee-section-wrapper {
+        padding: 30px 0 50px !important;
+    }
+
+    /*
+       Keep the SAME visual oval.
+       Just scale it down proportionally.
+    */
+
+    .ga-marquee-section-wrapper::before {
+        width: 700px;
+        height: 220px;
+
+        top: 55%;
+
+        filter: blur(24px);
+    }
+
+    .ga-marquee-section-wrapper::after {
+        width: 900px;
+        height: 260px;
+
+        top: 55%;
+
+        filter: blur(38px);
+    }
+
+    .ga-top-neon-glow-bar {
+        width: 65%;
+    }
+
+    .ga-marquee-mask-container {
+        margin-top: 70px !important;
+    }
+
+    .ga-logo-marquee-card {
+        flex-basis: 105px;
+
+        width: 105px;
+        height: 100px;
+
+        border-radius: 13px;
+    }
+
+    .ga-logo-marquee-card img {
+        border-radius: 13px;
+    }
+
+    .ga-marquee-content-container {
+        gap: 14px !important;
+    }
+
+    .ga-marquee-track.mb-4 {
+        margin-bottom: 14px !important;
+    }
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  /* =========================
            DESKTOP - 992px+
         ========================= */
@@ -82,7 +154,7 @@
   }
 
   .ga-main-heading {
-    font-size: 3rem; /* تضخيم عنوان الميزات الرئيسي ليناسب الـ Desktop */
+    font-size: 3rem; 
   }
 
   .ga-game-card {
@@ -92,9 +164,79 @@
 
 
 
+  /**********What We Do**********/
+
+  .ga-services-section {
+        padding: 100px 0;
+    }
+
+    .ga-main-heading {
+        font-size: 3rem;
+        /* تضخيم ترويسة العنوان المزدوج لراحة العين بالحواسب */
+    }
+
+    .ga-service-card {
+        max-width: 100%;
+        /* السماح لجميع الكروت بالتراص الهندسي المتساوي بنسبة 100% داخل شبكة بوتستراب */
+    }
+
+
+     .ga-logo-marquee-card {
+        width: 100px;
+        /* مقاس ثابت ومنظم للشعارات في الـ Desktop كالتصميم */
+        height: 110px;
+        padding: 0px;
+        border-radius: 16px;
+    }
+
+    /* تسريع حركة الشريط في الشاشات الكبيرة لتبدو انسيابية */
+    .tracking-forward .ga-marquee-content-container {
+        animation-duration: 35s;
+    }
+
+    .tracking-backward .ga-marquee-content-container {
+        animation-duration: 35s;
+    }
 
 
 
+
+
+
+
+
+    /*************Our Team**********/
+    .ga-team-section {
+        padding: 100px 0;
+    }
+
+    .ga-main-heading {
+        font-size: 3rem;
+    }
+
+    .ga-team-card {
+        max-width: 100%;
+        /* تمدد الكروت هندسياً بنسبة 100% لتملأ أعمدة شبكة البوتستراب الأربعة بالتساوي */
+    }
+
+
+
+
+
+/*****Contact us*********/
+
+ .ga-contact-section {
+        padding: 100px 0;
+    }
+
+    .ga-main-heading {
+        font-size: 3rem;
+    }
+
+    .ga-form-brutal-card {
+        padding: 40px;
+        /* مساحات وحشوات داخلية فاخرة للحواسب */
+    }
 
 
 
