@@ -1,6 +1,5 @@
-
 :root {
-   
+
     --ga-bg-dark: #0f1115;
     --ga-primary-neon: #CBFE1C;
     --ga-text-white: #F1F1F1;
@@ -25,7 +24,7 @@ body {
     background-color: var(--ga-bg-dark);
     color: var(--ga-text-white);
     overflow-x: hidden;
-    
+
 }
 
 a {
@@ -44,22 +43,26 @@ ul {
 /****Header & Navbar Styles****/
 
 .navbar {
-    background: #0b0f13 ;
+    background: #0b0f13;
     border-bottom: 1px solid #1c2025;
     padding: 16px 0;
     font-family: var(--font-two);
-  backdrop-filter: blur(10px);
-  background-color: rgba(15, 17, 21, 0.92) ;
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 17, 21, 0.92);
 }
 
 /* Logo */
 .navbar-brand {
-    color: var(--ga-primary-neon) ;
+    color: var(--ga-primary-neon);
     font-size: 23px;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.navbar-brand:hover{
+    cursor: pointer;
+    color: var(--ga-btn-hover);
 }
 
 .brand-icon {
@@ -147,154 +150,164 @@ ul {
 /* ***Hero Section Style*** */
 
 .ga-hero-section {
-  background-color: var(--ga-bg-dark);
-  min-height: auto; 
-  padding-top: 100px !important; 
-  width: 100%;
-  box-sizing: border-box;
-  background:
+    background-color: var(--ga-bg-dark);
+    min-height: auto;
+    padding-top: 100px !important;
+    width: 100%;
+    box-sizing: border-box;
+    background:
         linear-gradient(rgba(5, 7, 9, 0.92),
             rgba(5, 7, 9, 0.82)),
         url("../images/hero-bg-H6PoyNYD.jpg");
- background-size: cover;
- background-position: center;
-  background-attachment: fixed; 
-  position: relative;
-  z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
 }
 
 
 .ga-hero-main-title {
-  font-size: 2.5rem; 
-  font-family: var(--font-one);
-  font-weight: 900;
-  color: var(--ga-text-white);
-  line-height: 1.2;
-  letter-spacing: -1px;
+    font-size: 2.5rem;
+    font-family: var(--font-one);
+    font-weight: 900;
+    color: var(--ga-text-white);
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 
 .text-neon-glow {
-  color: var(--ga-primary-neon);
+    color: var(--ga-primary-neon);
 }
 
 
 .ga-hero-description {
-  font-family: var(--font-two);
-  font-size: 0.95rem;
-  color: #cbd5e1;
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 0 auto; 
-  font-weight: bold;
+    font-family: var(--font-two);
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 
 .ga-hero-primary-btn {
-  background-color: var(--ga-primary-neon);
-  font-family: var(--font-two);
-  color: #000000 !important; 
-  font-size: 0.9rem;
-  font-weight: 800;
-  padding: 14px 28px;
-  border-radius: 8px; 
-  text-align: center;
-  animation: neonPulseAnimation 2s infinite;
+    background-color: var(--ga-primary-neon);
+    font-family: var(--font-two);
+    color: #000000 !important;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-align: center;
+    animation: neonPulseAnimation 2s infinite;
 }
+
 .ga-hero-primary-btn:hover {
-  background-color: var(--ga-primary-neon); /* تفتيح درجة الفسفوري الخالص بنعومة */
-  
+    background-color: var(--ga-primary-neon);
+    /* تفتيح درجة الفسفوري الخالص بنعومة */
+
 }
 
 @keyframes neonPulseAnimation {
-  0% {
-    box-shadow: 0 0 0 0 rgba(204, 255, 51, 0.7), 0 4px 15px rgba(204, 255, 51, 0.2);
-  }
-  70% {
-    /* تتمدد الهالة للخارج وتصبح شفافة باهتة */
-    box-shadow: 0 0 0 15px rgba(204, 255, 51, 0), 0 4px 15px rgba(204, 255, 51, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(204, 255, 51, 0), 0 4px 15px rgba(204, 255, 51, 0.2);
-  }
+    0% {
+        box-shadow: 0 0 0 0 rgba(204, 255, 51, 0.7), 0 4px 15px rgba(204, 255, 51, 0.2);
+    }
+
+    70% {
+        /* تتمدد الهالة للخارج وتصبح شفافة باهتة */
+        box-shadow: 0 0 0 15px rgba(204, 255, 51, 0), 0 4px 15px rgba(204, 255, 51, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(204, 255, 51, 0), 0 4px 15px rgba(204, 255, 51, 0.2);
+    }
 }
 
 .ga-hero-secondary-btn {
-  background-color: transparent;
-  font-family: var(--font-two);
-  color: var(--ga-primary-neon);
-  font-size: 0.9rem;
-  font-weight: 800;
-  padding: 14px 28px;
-  border: 1px solid var(--ga-primary-neon); 
-  text-align: center;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s, color 0.2s;
-}
-.ga-hero-secondary-btn:hover {
-  background-color: var(--ga-primary-neon); 
-  color: #000000; 
-  transform: scale(1.05);
+    background-color: transparent;
+    font-family: var(--font-two);
+    color: var(--ga-primary-neon);
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: 800;
+    padding: 14px 28px;
+    border: 1px solid var(--ga-primary-neon);
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s, color 0.2s;
 }
 
-.ga-hero-primary-btn:active, .ga-hero-secondary-btn:active {
-  transform: scale(0.98);
+.ga-hero-secondary-btn:hover {
+    background-color: var(--ga-primary-neon);
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.ga-hero-primary-btn:active,
+.ga-hero-secondary-btn:active {
+    transform: scale(0.98);
 }
 
 .ga-hero-image-viewport {
-  width: 100%;
-  max-width: 540px; 
+    width: 100%;
+    max-width: 540px;
 }
 
 
 .ga-neon-gradient-border-box {
-  padding: 3px; 
-  background: linear-gradient(135deg, #ccff33 0%, #10b981 50%, #2563eb 100%);
-  border-radius: 24px; 
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
+    padding: 3px;
+    background: linear-gradient(135deg, #ccff33 0%, #10b981 50%, #2563eb 100%);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
 }
 
 .ga-hero-main-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 21px; 
+    width: 100%;
+    height: 400px;
+    display: block;
+    border-radius: 21px;
 }
 
 
 .ga-floating-stats-badge {
-  position: absolute;
-  bottom: -20px;
-  left: -15px; 
-  background-color: #0f1115; 
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
-  padding: 12px 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+    position: absolute;
+    bottom: -20px;
+    left: -15px;
+    background-color: #0f1115;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 12px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .badge-trophy-icon {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .badge-stats-txt {
-  text-align: left;
+    text-align: left;
 }
+
 .badge-stats-txt .lbl-muted {
-  font-family: var(--font-two);
-  font-size: 0.75rem;
-  color: var(--ga-text-muted);
-  font-weight: bold;
-  display: block;
-  margin-bottom: 2px;
+    font-family: var(--font-two);
+    font-size: 0.75rem;
+    color: var(--ga-text-muted);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
 }
+
 .badge-stats-txt .num-bold {
-  font-family: var(--font-two);
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: var(--ga-text-white);
-  letter-spacing: 0.5px;
+    font-family: var(--font-two);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--ga-text-white);
+    letter-spacing: 0.5px;
 }
 
 
@@ -462,57 +475,57 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid transparent; 
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              border-color 0.3s ease, 
-              box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .ga-service-card::before {
-  content: "";
-  position: absolute;
-  top: 24px;
-  left: 24px; 
-  width: 28px;
-  height: 28px;
-  background-color: var(--ga-primary-neon); 
-   clip-path: polygon(0 0, 100% 0, 0 100%); 
-  opacity: 0; 
-  transform: translate(-10px, -10px); 
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--ga-primary-neon);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    opacity: 0;
+    transform: translate(-10px, -10px);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 
 .ga-service-card::after {
-  content: "";
-  position: absolute;
-  bottom: 24px;
-  right: 24px; 
-  width: 28px;
-  height: 28px;
-  background-color: var(--ga-primary-neon);
-  clip-path: polygon(100% 100%, 100% 0, 0 100%);
-  opacity: 0; 
-  transform: translate(10px, 10px);
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--ga-primary-neon);
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+    opacity: 0;
+    transform: translate(10px, 10px);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 
 .ga-service-card:hover {
-  transform:  translateY(-4px); 
-  border-color: var(--ga-primary-neon); 
-  box-shadow: 0 15px 35px rgba(204, 255, 51, 0.08), 
-              inset 0 0 15px rgba(204, 255, 51, 0.03);
+    transform: translateY(-4px);
+    border-color: var(--ga-primary-neon);
+    box-shadow: 0 15px 35px rgba(204, 255, 51, 0.08),
+        inset 0 0 15px rgba(204, 255, 51, 0.03);
 }
 
 .ga-service-card:hover::before {
-  opacity: 1;
-  transform: translate(0, 0); 
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .ga-service-card:hover::after {
-  opacity: 1;
-  transform: translate(0, 0);
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 
@@ -642,8 +655,7 @@ ul {
     transform: translate(-50%, -50%);
 
     background:
-        radial-gradient(
-            ellipse 55% 45% at center,
+        radial-gradient(ellipse 55% 45% at center,
 
             rgba(190, 255, 55, 0.78) 0%,
 
@@ -655,8 +667,7 @@ ul {
 
             rgba(50, 80, 20, 0.10) 68%,
 
-            transparent 82%
-        );
+            transparent 82%);
 
     filter: blur(28px);
 
@@ -683,8 +694,7 @@ ul {
     transform: translate(-50%, -50%);
 
     background:
-        radial-gradient(
-            ellipse 55% 42% at center,
+        radial-gradient(ellipse 55% 42% at center,
 
             rgba(120, 180, 30, 0.28) 0%,
 
@@ -692,8 +702,7 @@ ul {
 
             rgba(60, 100, 20, 0.10) 50%,
 
-            transparent 75%
-        );
+            transparent 75%);
 
     filter: blur(45px);
 
@@ -708,17 +717,17 @@ ul {
 .ga-top-neon-glow-bar {
     width: 50%;
     margin: 0 auto;
-  height: 2px; 
-  background-color: var(--ga-primary-neon); 
-  
-  box-shadow: 0 0 12px 2px rgba(204, 255, 51, 0.7), 
-              0 0 24px 6px rgba(204, 255, 51, 0.3),
-              0 0 4px 1px #ffffff; 
-  
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
-  
-  
+    height: 2px;
+    background-color: var(--ga-primary-neon);
+
+    box-shadow: 0 0 12px 2px rgba(204, 255, 51, 0.7),
+        0 0 24px 6px rgba(204, 255, 51, 0.3),
+        0 0 4px 1px #ffffff;
+
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000000 10%, #000000 90%, transparent 100%);
+
+
 }
 
 
@@ -736,11 +745,9 @@ ul {
     height: 50px;
 
     background:
-        radial-gradient(
-            ellipse,
+        radial-gradient(ellipse,
             rgba(165, 255, 45, .22),
-            transparent 70%
-        );
+            transparent 70%);
 
     filter: blur(12px);
 
@@ -761,21 +768,17 @@ ul {
 
     margin-top: 80px !important;
 
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 2%,
-        black 98%,
-        transparent 100%
-    );
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 2%,
+            black 98%,
+            transparent 100%);
 
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 2%,
-        black 98%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 2%,
+            black 98%,
+            transparent 100%);
 }
 
 
@@ -901,80 +904,72 @@ ul {
 
 
 .ga-team-card {
-  width: 100%;
-  max-width: 290px;
-  height: 380px; /* الارتفاع الطولي المربع الظاهر بصورتك بدقة */
-  margin: 0 auto;
-  border-radius: 20px; /* الحواف الدائرية الناعمة للكروت الموضحة بالصورة */
-  background-color: #13161c;
-  cursor: pointer;
-  
-  /* تأمين تفعيل ميزة التسريع الرسومي with-change لحركة انسيابية فائقة */
-  will-change: transform;
-  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+    max-width: 290px;
+    height: 380px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #13161c;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .team-img-dual-layers {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .team-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .img-gray-base {
-  filter: grayscale(100%) contrast(110%);
-  z-index: 1;
+    filter: grayscale(100%) contrast(110%);
+    z-index: 1;
 }
 
 .img-color-fluid {
-  z-index: 2; /* تقف فوق الصورة الرمادية مباشرة */
-  
-  /* 💡 السر الهندسي الأول: قص وإخفاء الصورة الملونة بالكامل من الأعلى لأسفل،
-        الأبعاد (100% 0 0 0) تعني: قص الصورة بالكامل من الأعلى واحبس المتبقي الملون في القاع (0% مساحة) */
-  clip-path: inset(100% 0 0 0); 
-  
-  will-change: clip-path;
-  /* حركة صعود خط القص للأعلى بنعومة بالغة وانسيابية تستغرق نصف ثانية */
-  transition: clip-path 0.6s  cubic-bezier(0.25, 1, 0.5, 1); 
+    z-index: 2;
+    clip-path: inset(100% 0 0 0);
+
+    will-change: clip-path;
+    transition: clip-path 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 
 .card-overlay-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 24px 20px;
-  
-  /* تظليل أسود متلاشي للأعلى يحمي الكلمات في الحالة العادية والـ Hover كالصورة المرفقة */
-  background: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 50%, transparent 100%);
-  
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 20px;
+    background: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 50%, transparent 100%);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 4;
 }
 
 .ga-team-card:hover .img-color-fluid {
-  clip-path: inset(0% 0 0 0); /* الصورة الملونة تنكشف بالكامل للأعلى */
+    clip-path: inset(0% 0 0 0);
 }
 
-/* تمدد وبروز كرت اللاعب بالكامل للأمام بنسبة 2% لجمالية التصفح */
+
 .ga-team-card:hover {
-  border-color: var(--ga-primary-neon); /* إطار نيون فسفوري يضيء أطراف الكرت */
-  box-shadow: 0 12px 30px rgba(204, 255, 51, 0.04);
+    border-color: var(--ga-primary-neon);
+    box-shadow: 0 12px 30px rgba(204, 255, 51, 0.04);
 }
 
 .member-name {
@@ -1021,7 +1016,7 @@ ul {
     transition: opacity 0.3s ease, color 0.3s ease;
 }
 
-.side-vertical-text:hover{
+.side-vertical-text:hover {
     color: var(--ga-btn-hover);
 }
 
@@ -1045,10 +1040,10 @@ ul {
     width: 100%;
 }
 
-/* --- تنسيق الكروت الجانبية اليسرى الداكنة --- */
+
 .ga-info-brutal-card {
     background-color: #1E2939;
-    /* لون صندوق داكن يفصل الأقسام كالصورة تماماً */
+
     border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 16px;
     padding: 24px;
@@ -1056,14 +1051,14 @@ ul {
     width: 100%;
 }
 
-/* الدوائر الفسفورية الصاخبة الحاضنة للأيقونات السوداء المصمتة */
+
 .info-icon-circle-neon {
     width: 46px;
     height: 46px;
     background-color: var(--ga-primary-neon);
-    /* لون نيون فوسفوري كامل للدائرة */
+
     color: #000000;
-    /* أيقونة سوداء بالكامل لتبرز بوضوح */
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1089,9 +1084,9 @@ ul {
     font-weight: 500;
 }
 
-/* 💚 تنسيق بطاقة المجتمع الفسفورية الكبيرة ذات التدرج اللوني الجذاب (Join Our Community) */
+
 .ga-community-green-card {
-    /* تدرج لوني انسيابي مبهج يجمع بين درجات النيون الفوسفوري والأخضر المشع كالصورة */
+
     background: linear-gradient(135deg, #ccff33 0%, #10b981 100%);
     border-radius: 20px;
     padding: 32px 24px;
@@ -1102,7 +1097,7 @@ ul {
 
 .ga-community-green-card h3 {
     color: #000000;
-   font-family: var(--font-one);
+    font-family: var(--font-one);
     font-size: 1.5rem;
     font-weight: 900;
     margin: 0 0 8px 0;
@@ -1112,13 +1107,12 @@ ul {
 .ga-community-green-card p {
     font-family: var(--font-two);
     color: #042f1a;
-    /* لون زيتي داكن ناعم ومقروء */
     font-size: 0.9rem;
     font-weight: bold;
     margin: 0;
 }
 
-/* أزرار التواصل المستديرة السوداء المصمتة بداخل الكارت */
+
 .social-dark-round-btn {
     width: 40px;
     height: 40px;
@@ -1136,10 +1130,10 @@ ul {
 .social-dark-round-btn:hover {
     background-color: #111827;
     transform: scale(1.1) translateY(-2px);
-    /* نمو وارتفاع طفيف عند الـ Hover */
+
 }
 
-/* --- تنسيق كرت استمارة المراسلة الكبيرة اليمنى --- */
+
 .ga-form-brutal-card {
     background-color: #1E2939;
     border: 1px solid rgba(255, 255, 255, 0.02);
@@ -1167,15 +1161,15 @@ ul {
     opacity: 0.9;
 }
 
-/* التنسيق الموحد للحقول والقوائم بداخل بيئة الألعاب الداكنة */
+
 .ga-brutal-input,
 .ga-brutal-select,
 .ga-brutal-textarea {
     width: 100%;
     background-color: #364153;
-    /* خلفية حقول داكنة ومطابقة تماماً للصورة المرجعية */
+
     border: 1px solid #2a3142;
-    /* خط إطار رمادي دقيق */
+
     border-radius: 8px;
     padding: 12px 16px;
     color: var(--ga-text-white);
@@ -1190,7 +1184,7 @@ ul {
 .ga-brutal-input::placeholder,
 .ga-brutal-textarea::placeholder {
     color: #f1f1f19d;
-    /* لون تلميح الحقول الرمادي الهادئ */
+
     font-weight: bold;
 }
 
@@ -1198,16 +1192,16 @@ ul {
 .ga-brutal-select:focus,
 .ga-brutal-textarea:focus {
     border-color: var(--ga-primary-neon);
-    /* يضيء إطار الحقل بالفسفوري عند الضغط والكتابة */
+
     background-color: #222836;
 }
 
-/* تخصيص مظهر الـ Checkbox الافتراضي */
+
 .ga-brutal-checkbox {
     width: 16px;
     height: 16px;
     accent-color: var(--ga-primary-neon);
-    /* تلوين علامة الصح بالفسفوري تلقائياً */
+
     cursor: pointer;
 }
 
@@ -1220,19 +1214,19 @@ ul {
     user-select: none;
 }
 
-/* زر إرسال الرسالة الفسفوري الطويل العريض والتأثير الحركي المطور */
+
 .ga-form-submit-btn {
     width: 100%;
     background-color: var(--ga-primary-neon);
     color: #000000;
-    /* نص أسود خالص ليبرز بوضوح */
+
     border: none;
     padding: 14px;
     font-family: var(--font-two);
     font-size: 0.95rem;
     font-weight: 800;
     border-radius: 12px;
-    /* زوايا بيضاوية ناعمة */
+
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -1244,17 +1238,17 @@ ul {
 .ga-form-submit-btn:hover {
     background-color: var(--ga-btn-hover);
     transform: scale(1.02) translateY(-2px);
-    /* تمدد خفيف ونمو ارتدادي للأمام بمقدار 2% */
+
 }
 
 .ga-form-submit-btn:active {
     transform: scale(0.98);
 }
 
-/* العدادات الرقمية السفلية الفاخرة للـ استمارة */
+
 .form-bottom-stats-row {
     border-top: 1px solid #1d222e;
-    /* خط فاصل أفقي دقيق يغلق الاستمارة */
+
     width: 100%;
 }
 
@@ -1270,7 +1264,7 @@ ul {
     color: #eab308;
 }
 
-/* لون أصفر ذهبي لعداد المتاحة */
+
 
 .stat-desc {
     font-family: var(--font-two);
@@ -1298,7 +1292,7 @@ ul {
     width: 100%;
     padding: 70px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.02);
-    
+
 }
 
 
@@ -1319,7 +1313,7 @@ ul {
 
 .footer-logo-text-neon span {
     color: var(--ga-text-white);
-    
+
 }
 
 
@@ -1341,7 +1335,7 @@ ul {
 .footer-social-links-row a:hover {
     color: var(--ga-primary-neon);
     transform: translateY(-2px);
-    
+
 }
 
 
@@ -1361,7 +1355,7 @@ ul {
 
 .footer-links-menu li {
     margin-bottom: 12px;
-    
+
 }
 
 .footer-links-menu li a {
@@ -1383,14 +1377,14 @@ ul {
 }
 
 .footer-copyright-txt {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     font-size: 0.85rem;
     color: var(--ga-text-muted);
     font-weight: 500;
 }
 
 .footer-policy-links-group a {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-two);
     color: var(--ga-text-muted);
     font-size: 0.85rem;
     font-weight: 500;
