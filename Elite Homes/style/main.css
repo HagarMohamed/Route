@@ -41,11 +41,43 @@ img {
 
 /******* Header styles ********/
 
-.navbar .nav-link.active{
-  color: var(--primary);
+.navbar .nav-link{
+    position: relative;
+    transition: color .3s ease;
+
 }
 
 .dropdown-toggle::after {
     display: none;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+    color: var(--primary);
+}
+
+
+.navbar .nav-link::before{
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary);
+    transition: width .3s ease;
+}
+    
+.navbar .nav-link:hover::before,
+.navbar .nav-link.active::before{
+    width: 80%;
+}
+
+.navbar .dropdown-toggle::before{
+    width: 0;
+}
+.navbar .dropdown-toggle:hover::before,
+.navbar .dropdown-toggle.active::before{
+    width: 80%;
 }
 
