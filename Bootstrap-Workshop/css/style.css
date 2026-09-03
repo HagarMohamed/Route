@@ -1,0 +1,207 @@
+
+:root{
+    --font-primary:"Nunito Sans", sans-serif;
+    --font-sec:"Montserrat", sans-serif;
+    --color:rgb(230, 95, 120);
+}
+body{
+    font-family: var(--font-primary);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-sec);
+}
+.main-color{
+    color: var(--color);
+}
+.main-bg-color{
+    background-color: var(--color);
+}
+
+.navbar .nav-link.active{
+    color: var(--color);
+}
+
+.form-control:focus{
+    border-color: var(--color);
+    box-shadow: 0 0 0 0.25rem rgba(230, 95, 120, 0.25);
+}
+
+
+
+#hero{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+#hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+}
+.h1{
+    font-size: 4rem;
+}
+
+.btn{
+    color: #fff;
+}
+.btn:hover{
+    background-color: #fff;
+    color: var(--color);
+}
+
+
+.shape{
+    position: absolute;
+    bottom: 10px;
+    width: 40px;
+    height: 80px;
+    border: 1px solid white;
+    border-radius: 50px;
+    animation: scrollShape 1.5s infinite;
+}
+
+.shape::after{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%);
+}
+
+.settings{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+}
+
+@keyframes scrollShape {
+    0% {
+        opacity: 1;
+        bottom: 8px;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 32px;
+    }
+}
+
+
+.about ul li{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about ul li:hover{
+    background-color: var(--color);
+}
+
+.about ul li a svg{
+    width: 20px;
+    height: 20px;
+    color: #212529;
+    text-align: center;
+}
+
+
+
+
+.client-item .quted-icon{
+    width: 40px;
+    height: 40px;
+    color: var(--color);
+
+    
+}
+
+#carouselExampleIndicators .custom-carousel-indicators{
+    bottom: -20px;
+}
+
+#carouselExampleIndicators .custom-carousel-indicators button{
+    width: 30px;
+    height: 5px;
+    background-color: var(--color);
+}
+
+
+
+.ourWork .work-img{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ourWork .work-img img{
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.ourWork .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.ourWork .work-img:hover img{
+    transform: scale(1.1);
+}
+
+.ourWork .work-img:hover .layer,
+.ourWork .work-img:focus-within .layer{
+    opacity: 1;
+    transform: translateY(0);
+}
+   
+
+
+.work-filters .btn.active{
+    background-color: var(--color);
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+}
+
+.work-filters .btn{
+    color: #212529
+
+}
+
+.portfolio-item{
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item.is-hidden{
+    display: none;
+}

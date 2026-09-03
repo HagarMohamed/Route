@@ -1,0 +1,62 @@
+@keyframes header-animation {
+  0% {content: "|";}
+  3% {content: "D|";}
+  5% {content: "De|";}
+  7% {content: "Dev|";}
+  10% {content: "Deve|";}
+  13% {content: "Devel|";}
+  15% {content: "Develo|";}
+  17% {content: "Develop|";}
+  20% {content: "Developm|";}
+  24% {content: "Developme|";}
+  25% {content: "Developmen|";}
+  27% {content: "Development|";}
+  30% {content: "Development|";}
+  32% {content: "Developmen|";}
+  35% {content: "Developme|";}
+  37% {content: "Develop|";}
+  40% {content: "Develo|";}
+  42% {content: "Devel|";}
+  45% {content: "Deve|";}
+  47% {content: "Dev|";}
+  50% {content: "De|";}
+  52% {content: "Des|";}
+  55% {content: "Desi|";}
+  57% {content: "Desig|";}
+  60% {content: "Design|";}
+  62% {content: "Designe|";}
+  65% {content: "Designer|";}
+  67% {content: "Designer|";}
+  70% {content: "Designe|";}
+  72% {content: "Design|";}
+  75% {content: "Desig|";}
+  77% {content: "Desi|";}
+  80% {content: "Des|";}
+  82% {content: "De|";}
+  85% {content: "Dev|";}
+  87% {content: "Deve|";}
+  90% {content: "Devel|";}
+  92% {content: "Develo|";}
+  95% {content: "Develop|";}
+  97% {content: "Develope|";}
+  100% {content: "Developer|";}
+}
+
+
+@keyframes updown {
+    0%{
+        bottom: 20px;
+    }
+    25%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 35px;
+    }
+    75%{
+        bottom: 38px;
+    }
+    100%{
+        bottom:42px;
+    }
+}
