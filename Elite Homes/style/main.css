@@ -6,8 +6,24 @@
   --secondary: #d98b6c;
 }
 
+.text-main {
+  color: var(--primary);
+}
+
 .bg-main {
   background-color: var(--primary);
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.btn-card{
+    background-color: #ede9fe
 }
 
 * {
@@ -113,12 +129,11 @@ img {
 
 /****** Featured Properties Styles *****/
 
-.collection-badge{
-    
-
+.featuredProperties{
+    background-color: #F9FAFB;
 }
 
-.rounded-pill{
+span.rounded-pill{
     color: var(--primary);
     font-size: .75rem;
     font-weight: 600;
@@ -129,15 +144,73 @@ img {
     background: linear-gradient(135deg, #f5f3ff 0%, #e0d9ff 100%);
 }
 
-.left-line::after{
-    
+.badge-line{
+    width: 85px;
+    height: 2px;
+    display: block;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #7c3aed
+    );
 }
 
-.right-line::after{
-    
+.badge-line:last-child{
+    width: 85px;
+    height: 2px;
+    display: block;
+    background: linear-gradient(
+        to left,
+        transparent,
+        #7c3aed
+    );
 }
 
 
+.main-heading{
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #a855f7,
+        #fb923c
+    );
 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.featured-badge{
+   position: absolute;
+    top: 22px;
+    left: 22px;
+    color: white;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+.photos-badge{
+   position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: .75rem;
+    color: #ffffff;
+    padding: 6px 14px;
+}
+
+.heart-badge{
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    background-color: #ffffffba;
+    padding: 10px;
+    border-radius: 45%;
+}
+
+.heart-badge:hover{
+    color:red
+}
 
 
