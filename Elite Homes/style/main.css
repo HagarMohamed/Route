@@ -290,3 +290,108 @@ p.badge-right{
 
 
 
+
+/*********** Testimonial Styles ********/
+
+.testimonials{
+    background-color: #57178E;
+}
+
+
+.testimonial-card {
+    max-width: 850px;
+    background-color: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stars {
+    color: #f59e0b;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 35px;
+}
+
+.client-info {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.client-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-main {
+    color: #7c3aed !important;
+}
+
+
+/* Carousel controls */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+
+    background-color: #7c3aed;
+
+    border-radius: 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+
+/* Indicators */
+
+.carousel-indicators {
+    position: static;
+    margin-top: 30px;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    margin: 0 5px !important;
+    background-color: transparent !important;
+    border: 2px solid #7c3aed !important;
+    opacity: 1 !important;
+}
+
+.carousel-indicators button.active {
+    background-color: white !important;
+}
+
+.carousel-indicators button:hover{
+    background-color: white !important;
+}
