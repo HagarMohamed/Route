@@ -3,6 +3,11 @@
 
 :root {
   --primary: #7A06E1;
+  --secondary: #d98b6c;
+}
+
+.bg-main {
+  background-color: var(--primary);
 }
 
 * {
@@ -80,4 +85,59 @@ img {
 .navbar .dropdown-toggle.active::before{
     width: 80%;
 }
+
+
+
+
+
+
+
+
+
+/******* Hero Section Styles ********/
+
+
+.hero-section{
+     background : linear-gradient(90deg, rgba(80, 0, 220, .85), rgba(120,40, 230, .7)), url('../image/hero-bg-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/****** Featured Properties Styles *****/
+
+.collection-badge{
+    
+
+}
+
+.rounded-pill{
+    color: var(--primary);
+    font-size: .75rem;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 0.55rem 1rem;
+    text-transform: uppercase;
+    border: 2px solid #ddd6ff;
+    background: linear-gradient(135deg, #f5f3ff 0%, #e0d9ff 100%);
+}
+
+.left-line::after{
+    
+}
+
+.right-line::after{
+    
+}
+
+
+
+
 

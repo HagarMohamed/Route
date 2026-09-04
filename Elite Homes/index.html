@@ -11,6 +11,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/media.css">
 </head>
 
 <body>
@@ -19,8 +20,8 @@
     <!-- Header Section -->
 
 
-    <header class="bg-light py-3">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary py-2">
+    <header class="bg-light py-2">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand fw-bold fs-3" href="#">EliteHomes</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -75,10 +76,147 @@
     <!-- Hero Section -->
 
 
+    <section id="hero-section" class="hero-section p-lg-1 py-5">
+        <div class="container">
+
+            <div class="heading text-center">
+                <h1 class="display-4 fw-bold text-white">Find Your Dream Home</h1>
+                <p class="lead text-white">Discover exceptional properties in prime locations. From modern condos to
+                    luxury estates, we help you find the perfect place to call home.</p>
+            </div>
+            <div class="propert-form p-4 rounded-4 shadow bg-white mt-4 w-75 mx-auto text-center">
+                <form class="">
+                    <div class="row g-4 mb-3">
+                        <div class="col-lg-4">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location"
+                                placeholder="Enter city, neighborhood, or ZIP code">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="property-type" class="form-label">Property Type</label>
+                            <select name="" id="property-type" class="form-select">
+                                <option value="1">House</option>
+                                <option value="2">Condo</option>
+                                <option value="3">Apartment</option>
+                                <option value="4">Land</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="price-range" class="form-label">Price Range</label>
+                            <select name="" id="price-range" class="form-select">
+                                <option value="1">$100,000 - $200,000</option>
+                                <option value="2">$200,000 - $300,000</option>
+                                <option value="3">$300,000 - $400,000</option>
+                                <option value="4">$400,000 - $500,000</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row g-4 mb-3">
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <label for="bedrooms" class="form-label">Bedrooms</label>
+                            <select class="form-select" id="bedrooms">
+                                <option selected>Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <label for="bathrooms" class="form-label">Bathrooms</label>
+                            <select class="form-select" id="bathrooms">
+                                <option selected>Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <label for="Min Sq Ft" class="form-label">Min Sq Ft</label>
+                            <input type="number" class="form-control" id="MinSqFt">
+
+                        </div>
+                        <div class=" col-6 col-md-6 col-lg-3">
+                            <label for="Max Sq Ft" class="form-label">Max Sq Ft</label>
+                            <input type="number" class="form-control" id="MaxSqFt">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn bg-main text-white w-100 mt-3 p-3 rounded-3">
+                        <i class="fa-solid fa-magnifying-glass"> </i> Search Properties
+                    </button>
+                </form>
+
+
+            </div>
+
+            <div class="Quick Stats text-center mt-5 w-75 mx-auto">
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="text-white">
+                            <h2 class="fw-bold">15,000+</h2>
+                            <p class="mb-0">Active Listings</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="text-white">
+                            <h2 class="fw-bold">98%</h2>
+                            <p class="mb-0">Client Satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="text-white">
+                            <h2 class="fw-bold">500+</h2>
+                            <p class="mb-0">Expert Agents</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="text-white">
+                            <h2 class="fw-bold">25</h2>
+                            <p class="mb-0">Years Experience</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
 
 
 
     <!-- Featured Properties Section -->
+
+    <section id="featuredProperties" class="py-5">
+        <div class="container">
+
+            <div class="collection-badge text-center mt-5 position-relative">
+                <span class="left-line"></span>
+                <span class=" rounded-pill">Premium Collection</span>
+                <span class="right-line"></span>
+            </div>
+            <div class="heading text-center mt-4">
+                <h2 class="fw-bold">Featured Properties</h2>
+                <p class="lead">Discover our handpicked selection of premium properties in the most desirable locations
+                </p>
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
 
 
 
