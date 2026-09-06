@@ -6,11 +6,19 @@
   --secondary: #d98b6c;
 }
 
+::selection {
+    background-color: #7c3aed; 
+    color: #ffffff;           
+}
+
 .text-main {
   color: var(--primary);
 }
 
 .bg-main {
+  background-color: var(--primary);
+}
+.btn-main {
   background-color: var(--primary);
 }
 
@@ -24,6 +32,10 @@
 
 .btn-card{
     background-color: #ede9fe
+}
+
+.btn-card:hover{
+    background-color: #9d8bebb8
 }
 .description{
     color: #4a5565;
@@ -218,25 +230,39 @@ span.rounded-pill{
     color:red
 }
 
+.viewAll{
+    transition: box-shadow .3s ease;
+}
+.viewAll:hover{
+    background-color: #7c3aed;
+    box-shadow: 0 0 10px #7c3aed;
+
+}
+
+
+
 
 /******* Our Services Styles ********/
 
 
-.ourServices{
+.services-section{
     background-color: #FFF;
+    padding-bottom: 30px;
 }
 
 .services-filter{
     border-bottom: 1px solid #7a06e138;
     margin-bottom: 30px;
 }
+.services-filter button{
+    margin-left: 10px;
+}
 
 .services-filter button.active{
-    background-color: #7a06e138;
+    background-color: #F5F3FF;
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
     padding: 10px 20px;
-    transition: all 0.4s ease;
 }
 
 .services-filter button::after{
@@ -257,15 +283,15 @@ span.rounded-pill{
 
 li i.icon{
     width: 40px;
-    height: 40px;
+    height: 45px;
     color: var(--primary);
     background-color: #7a06e138;
-    border: 2px solid #ccc;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    padding: 10px;
     transition: all 0.4s ease;
 }
 
@@ -293,6 +319,49 @@ p.badge-right{
    border-radius: 10px;
    transition: all 0.4s ease;
 }
+
+
+.icon-green {
+    color: #00A63E !important;
+    background-color: #DCFCE7 !important;
+}
+.btn-green {
+    background: #00A63E !important;
+    color: white !important;
+    border: none !important;
+}
+
+.icon-orange {
+    color: #D08700 !important;
+    background-color: #FFF9C2 !important;
+}
+.btn-orange {
+    background: #D08700 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.icon-blue {
+    color: #442DD8 !important;
+    background-color: #E0E7FF !important;
+}
+.btn-blue {
+    background: #442DD8 !important;
+    color: white !important;
+    border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -481,6 +550,67 @@ p.badge-right{
     background-color: #ffffff;
 }
 
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: #f3effc; 
+    z-index: 1;
+}
+/* .title-section::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -33px; 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #e0d9ff;
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+} */
+
+
+#contact::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -120px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: #f3effc;
+    z-index: 1;
+}
+
+/* #contact .row.mt-5::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 30px; 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #e0d9ff;
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+} */
+
+#contact .container {
+    position: relative;
+    z-index: 2; 
+}
+
+.title-section {
+    position: relative;
+}
 
 .contact-card {
     border: 1px solid #e9ecef;

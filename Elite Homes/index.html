@@ -37,8 +37,8 @@
                         </li>
 
                         <li class="nav-item dropdown position-static mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#properties" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Properties <i class="fa-solid fa-chevron-down ms-1 small"></i>
                             </a>
 
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
 
-                                        
+
                                         <div class="col-12 col-lg-3">
                                             <h6 class="menu-heading">Property Types</h6>
                                             <ul class="property-grid-list list-unstyled mb-0 d-grid gap-2">
@@ -106,7 +106,7 @@
                                             </ul>
                                         </div>
 
-                                        
+
                                         <div class="col-12 col-lg-3">
                                             <h6 class="menu-heading">Popular Locations</h6>
                                             <div
@@ -145,15 +145,16 @@
                                             </div>
                                         </div>
 
-                                        
+
                                         <div class="col-12 col-lg-3">
                                             <h6 class="menu-heading">Resources</h6>
                                             <div
                                                 class="d-flex flex-row flex-lg-column flex-nowrap gap-3 overflow-x-auto pb-2 pb-lg-0 mobile-scroll-row">
                                                 <div class="resource-card bg-purple-light p-3 rounded flex-shrink-0">
-                                                    <div class="fw-bold text-dark small mb-1"><i
-                                                            class="fa-solid fa-book-open text-main me-1"></i> Buying
-                                                        Guide</div>
+                                                    <div class="fw-bold text-dark fs-5 mb-1"><i
+                                                            class="fa-solid fa-book-open text-main me-1"></i> <span>
+                                                            Buying Guide
+                                                        </span></div>
                                                     <p class="text-muted mb-2 extra-small">Essential tips for
                                                         homebuyers.</p>
                                                     <a href="#"
@@ -161,9 +162,10 @@
                                                         More →</a>
                                                 </div>
                                                 <div class="resource-card bg-green-light p-3 rounded flex-shrink-0">
-                                                    <div class="fw-bold text-dark small mb-1"><i
+                                                    <div class="fw-bold text-dark fs-5 mb-1"><i
                                                             class="fa-solid fa-chart-line text-green me-1"></i>
-                                                        Investment Tips</div>
+                                                        <span id="invest">Investment Tips</span>
+                                                    </div>
                                                     <p class="text-muted mb-2 extra-small">Smart property strategies.
                                                     </p>
                                                     <a href="#"
@@ -171,11 +173,13 @@
                                                         More →</a>
                                                 </div>
 
-                                                <div class="resource-card bg-green-light p-3 rounded flex-shrink-0">
-                                                    <div class="fw-bold text-dark small mb-1"><i
+                                                <div class="resource-card bg-purple-light p-3 rounded flex-shrink-0">
+                                                    <div class="fw-bold text-dark fs-5 mb-1"><i
                                                             class="fa-solid fa-database text-main me-1"></i>
-                                                        Market Reports</div>
-                                                    <p class="text-muted mb-2 extra-small">In-depth analysis of real estate market trends
+                                                        <span>Market Reports</span>
+                                                    </div>
+                                                    <p class="text-muted mb-2 extra-small">In-depth analysis of real
+                                                        estate market trends
                                                     </p>
                                                     <a href="#"
                                                         class="text-main fw-bold extra-small text-decoration-none">Learn
@@ -190,17 +194,19 @@
                         </li>
 
                         <li class="nav-item mx-1">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="#services">Services</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="#faq">FAQ</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -220,7 +226,7 @@
     <!-- Hero Section -->
 
 
-    <section id="hero-section" class="hero-section p-lg-1 py-5">
+    <section id="hero" class="hero-section p-lg-1 py-5">
         <div class="container">
 
             <div class="heading text-center">
@@ -339,10 +345,10 @@
 
     <!-- Featured Properties Section -->
 
-    <section id="featuredProperties" class="featuredProperties py-5">
+    <section id="properties" class="featuredProperties py-5">
         <div class="container">
 
-            <div class="title-section text-center my-5">
+            <div class="title-section contact-decor-circle text-center my-5">
                 <div class="collection-badge d-flex align-items-center justify-content-center gap-3 mb-4">
                     <span class="badge-line"></span>
                     <span class=" rounded-pill">Premium Collection</span>
@@ -356,142 +362,147 @@
                 </div>
             </div>
 
+
+
             <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4 border-0">
+
+                <div class="col-12  col-lg-4">
+                    <div class="card shadow rounded-4 border-0 h-100 d-flex flex-column">
                         <div class="card-img-wrapper position-relative">
                             <img src="./image/featured-properties-img-1.png"
-                                class="card-img-top rounded-top-4 object-fit-cover" alt="Property 1">
+                                class="card-img-top rounded-top-4 object-fit-cover" alt="Modern Luxury Estate"
+                                style="height: 240px;">
                             <div class="featured-badge rounded-pill bg-main border-0">Featured</div>
-                            <div class="photos-badge rounded-pill bg-dark"><i class="fa-solid fa-camera"></i> 24 Photos
-                            </div>
-                            <div class="heart-badge"><i class="fa-solid fa-heart"></i></div>
+                            <div class="photos-badge rounded-pill bg-dark opacity-90"><i class="fa-solid fa-camera"></i>
+                                24 Photos</div>
+                            <div
+                                class="heart-badge d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm">
+                                <i class="fa-solid fa-heart text-muted"></i></div>
                         </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2 ">
-                                <h3 class="text-main fw-bold"> $2,850,000</h3>
-                                <p class="text-muted">Price per sq ft: $425</p>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center text-muted gap-2 mb-3">
-                                <span>4 beds</span>
-                                <span>• 3.5 baths</span>
-                                <span>• 6,720 sqft</span>
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="text-main fw-bold h4 mb-0">$2,850,000</h3>
+                                    <p class="text-muted small mb-0">Price per sq ft: $425</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-start align-items-center text-muted small gap-2 mb-3">
+                                    <span>4 beds</span><span>•</span>
+                                    <span>3.5 baths</span><span>•</span>
+                                    <span>6,720 sqft</span>
+                                </div>
+                                <p class=" mb-1 text-dark">Modern Luxury Estate</p>
+                                <p class="text-muted small mb-3">1234 Beverly Hills Drive, Beverly Hills, CA 90210</p>
                             </div>
 
-                            <p class="fw-bold">Modern Luxury Estate</p>
-
-                            <p>1234 Beverly Hills Drive, Beverly Hills, CA 90210</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="d-flex  align-items-center gap-2">
-                                    <img src="./image/avatar-1.jpg" alt="Agent 1" class="rounded-circle" width="40"
-                                        height="40">
-                                    <p class="mb-0 ">John Mitchell</p>
+                            <div class="d-flex justify-content-between align-items-center pt-3 mt-auto">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./image/avatar-1.jpg" alt="John Mitchell"
+                                        class="rounded-circle object-fit-cover" width="40" height="40">
+                                    <p class="mb-0 small text-dark">John Mitchell</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-card text-main">Schedule Tour</button>
+                                    <button class="btn btn-card text-main btn-sm fw-bold py-2 rounded px-3">Schedule Tour</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
 
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4 border-0">
+                <div class="col-12  col-lg-4">
+                    <div class="card shadow rounded-4 border-0 h-100 d-flex flex-column">
                         <div class="card-img-wrapper position-relative">
-                            <img src="./image/featured-properties-img-2.png" class="card-img-top rounded-top-4"
-                                alt="Property 1">
+                            <img src="./image/featured-properties-img-2.png"
+                                class="card-img-top rounded-top-4 object-fit-cover" alt="Downtown Penthouse"
+                                style="height: 240px;">
                             <div class="featured-badge rounded-pill bg-green border-0">New Listing</div>
-                            <div class="photos-badge rounded-pill bg-dark"><i class="fa-solid fa-camera"></i> 18 Photos
-                            </div>
-                            <div class="heart-badge"><i class="fa-solid fa-heart"></i></div>
+                            <div class="photos-badge rounded-pill bg-dark opacity-90"><i class="fa-solid fa-camera"></i>
+                                18 Photos</div>
+                            <div
+                                class="heart-badge d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm">
+                                <i class="fa-solid fa-heart text-muted"></i></div>
                         </div>
-                        <div class="card-body pb-2">
-                            <div class="d-flex justify-content-between align-items-center mb-2 ">
-                                <h3 class="text-main fw-bold"> $1,425,000</h3>
-                                <p class="text-muted">Price per sq ft: $650</p>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center text-muted gap-2 mb-3">
-                                <span>3 beds</span>
-                                <span>• 2.5 baths</span>
-                                <span>• 2,192 sqft</span>
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="text-main fw-bold h4 mb-0">$1,425,000</h3>
+                                    <p class="text-muted small mb-0">Price per sq ft: $650</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-start align-items-center text-muted small gap-2 mb-3">
+                                    <span>3 beds</span><span>•</span>
+                                    <span>2.5 baths</span><span>•</span>
+                                    <span>2,192 sqft</span>
+                                </div>
+                                <p class=" mb-1 text-dark">Downtown Penthouse</p>
+                                <p class="text-muted small mb-3">789 Metropolitan Ave, New York, NY 10001</p>
                             </div>
 
-                            <p class="fw-bold">Downtown Penthouse</p>
-
-                            <p>789 Metropolitan Ave, New York, NY 10001</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="d-flex  align-items-center gap-2">
-                                    <img src="./image/avatar-6.jpg" alt="Agent 2" class="rounded-circle" width="40"
-                                        height="40">
-                                    <p class="mb-0 ">Emily Rodriguez</p>
+                            <div class="d-flex justify-content-between align-items-center  pt-3 mt-auto">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./image/avatar-6.jpg" alt="Emily Rodriguez"
+                                        class="rounded-circle object-fit-cover" width="40" height="40">
+                                    <p class="mb-0 small text-dark">Emily Rodriguez</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-card text-main">Schedule Tour</button>
+                                    <button class="btn btn-card text-main btn-sm fw-bold py-2 rounded px-3">Schedule Tour</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
 
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4 border-0">
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow rounded-4 border-0 h-100 d-flex flex-column">
                         <div class="card-img-wrapper position-relative">
-                            <img src="./image/featured-properties-img-3.png" class="card-img-top rounded-top-4"
-                                alt="Property 1">
+                            <img src="./image/featured-properties-img-3.png"
+                                class="card-img-top rounded-top-4 object-fit-cover" alt="Family Suburban Home"
+                                style="height: 240px;">
                             <div class="featured-badge rounded-pill bg-orange border-0">Price Drop</div>
-                            <div class="photos-badge rounded-pill bg-dark"><i class="fa-solid fa-camera"></i> 32 Photos
-                            </div>
-                            <div class="heart-badge"><i class="fa-solid fa-heart"></i></div>
+                            <div class="photos-badge rounded-pill bg-dark opacity-90"><i class="fa-solid fa-camera"></i>
+                                32 Photos</div>
+                            <div
+                                class="heart-badge d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm">
+                                <i class="fa-solid fa-heart text-muted"></i></div>
                         </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2 ">
-                                <h3 class="text-main fw-bold"> $875,000</h3>
-                                <p class="text-muted">$925,000</p>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center text-muted gap-2 mb-3">
-                                <span>5 beds</span>
-                                <span>• 4 baths</span>
-                                <span>• 3,845 sqft</span>
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="text-main fw-bold h4 mb-0">$875,000</h3>
+                                    <p class="text-muted small text-decoration-line-through mb-0">$925,000</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-start align-items-center text-muted small gap-2 mb-3">
+                                    <span>5 beds</span><span>•</span>
+                                    <span>4 baths</span><span>•</span>
+                                    <span>3,845 sqft</span>
+                                </div>
+                                <p class=" mb-1 text-dark">Family Suburban Home</p>
+                                <p class="text-muted small mb-3">456 Oak Tree Lane, Austin, TX 78701</p>
                             </div>
 
-                            <p class="fw-bold">Family Suburban Home</p>
-
-                            <p>456 Oak Tree Lane, Austin, TX 78701</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="d-flex  align-items-center gap-2">
-                                    <img src="./image/avatar-3.jpg" alt="Agent 1" class="rounded-circle" width="40"
-                                        height="40">
-                                    <p class="mb-0 ">Michael Chen</p>
+                            <div class="d-flex justify-content-between align-items-center pt-3 mt-auto">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./image/avatar-3.jpg" alt="Michael Chen"
+                                        class="rounded-circle object-fit-cover" width="40" height="40">
+                                    <p class="mb-0 small text-dark">Michael Chen</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-card text-main">Schedule Tour</button>
+                                    <button class="btn btn-card text-main btn-sm fw-bold py-2 rounded px-3">Schedule Tour</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
-
-
 
             </div>
 
+
+
+
+
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn bg-main bg-gradient text-white py-3 px-5">View All Properties <i
+                <button class="btn viewAll bg-main bg-gradient text-white py-3 px-5">View All Properties <i
                         class="fa-solid fa-arrow-right ms-2"></i></button>
             </div>
 
@@ -510,7 +521,7 @@
     <!--Our Services Section -->
 
 
-    <section id="ourServices" class="ga-services-section">
+    <section id="services" class="services-section">
         <div class="container">
             <div class="title-section text-center my-5">
                 <div class="collection-badge d-flex align-items-center justify-content-center gap-3 mb-4">
@@ -526,7 +537,7 @@
 
 
 
-            <div class="services-filter d-flex justify-content-center align-items-center 
+            <div class="services-filter d-flex flex-wrap justify-content-center align-items-center 
             gap-1" role="tablist">
 
                 <button class="nav-link active" type="button" data-bs-toggle="pill" data-bs-target="#buy">
@@ -544,7 +555,7 @@
                     Renting
                 </button>
 
-                <button class="nav-link" type="button" data-bs-toggle="pill" data-bs-target="#invest">
+                <button class="nav-link" type="button" data-bs-toggle="pill" data-bs-target="#investment">
                     <i class="fas fa-chart-bar mx-2"></i>
                     Investing
                 </button>
@@ -570,7 +581,7 @@
                                         process, from initial search to closing day.</p>
 
                                     <ul class="mt-4 p-0">
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-search icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-search icon"></i>
                                             <div class="ms-3">
                                                 <h4 class="fw-bold">Property Search</h4>
                                                 <p>Access exclusive listings and get notified of new properties that
@@ -582,7 +593,7 @@
                                             </div>
 
                                         </li>
-                                        <li class="d-flex align-items-center"> <i
+                                        <li class="d-flex align-items-start"> <i
                                                 class="fa-solid fa-calculator icon"></i>
                                             <div>
                                                 <h4 class="fw-bold">Financial Planning</h4>
@@ -592,7 +603,7 @@
                                             </div>
                                         </li>
 
-                                        <li class="d-flex align-items-center"> <i
+                                        <li class="d-flex align-items-start"> <i
                                                 class="fa-solid fa-handshake icon"></i>
                                             <div>
                                                 <h4 class="fw-bold">Negotiation Support</h4>
@@ -602,9 +613,10 @@
                                             </div>
                                         </li>
 
-                                        <button class="btn bg-main bg-gradient text-white py-3 px-5 mt-2">Start Your
-                                            Search</button>
+                                        
                                     </ul>
+                                    <button class="btn bg-main bg-gradient text-white py-3 px-5 mt-2">Start Your
+                                            Search</button>
 
                                 </div>
 
@@ -635,7 +647,7 @@
                                         our comprehensive marketing strategy and expert guidance.</p>
 
                                     <ul class="mt-4 p-0">
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-analysis icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-chart-line icon icon-green"></i>
                                             <div class="ms-3">
                                                 <h4 class="fw-bold">Market Analysis</h4>
                                                 <p>Get a comprehensive market analysis to price your home competitively.
@@ -645,7 +657,7 @@
                                             </div>
 
                                         </li>
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-camera icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-camera icon icon-green"></i>
                                             <div>
                                                 <h4 class="fw-bold">Professional Marketing</h4>
                                                 <p>High-quality photography, virtual tours, and multi-channel marketing
@@ -653,7 +665,7 @@
                                             </div>
                                         </li>
 
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-user icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-users icon icon-green"></i>
                                             <div>
                                                 <h4 class="fw-bold">Buyer Screening</h4>
                                                 <p>We pre-qualify buyers to ensure serious inquiries and smooth
@@ -661,9 +673,11 @@
                                             </div>
                                         </li>
 
-                                        <button class="btn bg-main bg-green text-white py-3 px-5 mt-2">Get Home
-                                            Valuation</button>
+                                       
                                     </ul>
+
+                                     <button class="btn bg-green btn-green text-white py-3 px-5 mt-2">Get Home
+                                            Valuation</button>
 
                                 </div>
 
@@ -686,67 +700,7 @@
 
                     </div>
 
-                    <div class="tab-pane fade" id="rent">
-                        <div class="row justify-content-between align-content-center align-items-center">
-
-                            <div class="col-lg-6 col-12">
-                                <div class="service-content">
-                                    <h2 class="fw-bold">Premium Rental Properties</h2>
-                                    <p class="mt-3 text-muted">Find your perfect rental home with our extensive
-                                        portfolio of quality properties and personalized service.</p>
-
-                                    <ul class="mt-4 p-0">
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-location icon"></i>
-                                            <div class="ms-3">
-                                                <h4 class="fw-bold">Prime Locations</h4>
-                                                <p>Access rentals in the most desirable neighborhoods and communities.
-                                                </p>
-
-
-                                            </div>
-
-                                        </li>
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-vrified icon"></i>
-                                            <div>
-                                                <h4 class="fw-bold">Verified Properties</h4>
-                                                <p>All our rental properties are thoroughly inspected and verified for
-                                                    quality.</p>
-                                            </div>
-                                        </li>
-
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-support icon"></i>
-                                            <div>
-                                                <h4 class="fw-bold">24/7 Support</h4>
-                                                <p>Round-the-clock maintenance and tenant support services.</p>
-                                            </div>
-                                        </li>
-
-                                        <button class="btn bg-main bg-gradient text-white py-3 px-5 mt-2">Browse
-                                            Rentals</button>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-
-                                <div class="service-img position-relative">
-                                    <img src="./image/service-img-4.png" alt=" Service Image"
-                                        class="img-fluid service-img rounded-5">
-                                    <p class="badge-left success-rate"><span class="fw-bold text-main">5,000+</span>
-                                        <br />
-                                        Available Rentals
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="tab-pane fade" id="invest">
+                    <div class="tab-pane fade" id="investment">
                         <div class="row justify-content-between align-content-center align-items-center">
 
                             <div class="col-lg-6 col-12">
@@ -756,7 +710,7 @@
                                         with our expert guidance and market insights.</p>
 
                                     <ul class="mt-4 p-0">
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-search icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-chart-pie icon icon-orange"></i>
                                             <div class="ms-3">
                                                 <h4 class="fw-bold">Portfolio Analysis</h4>
                                                 <p>Comprehensive analysis of investment opportunities and portfolio
@@ -766,7 +720,7 @@
                                             </div>
 
                                         </li>
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-project icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-money-bill-1-wave icon icon-orange"></i>
                                             <div>
                                                 <h4 class="fw-bold">ROI Projections</h4>
                                                 <p>Detailed return on investment calculations and market forecasting.
@@ -774,8 +728,8 @@
                                             </div>
                                         </li>
 
-                                        <li class="d-flex align-items-center"> <i
-                                                class="fa-solid fa-management icon"></i>
+                                        <li class="d-flex align-items-start"> <i
+                                                class="fa-solid fa-gear icon icon-orange"></i>
                                             <div>
                                                 <h4 class="fw-bold">Property Management</h4>
                                                 <p>Full-service property management for hands-off investment experience.
@@ -783,9 +737,11 @@
                                             </div>
                                         </li>
 
-                                        <button class="btn bg-main bg-orange text-white py-3 px-5 mt-2">Explore
-                                            Investments</button>
+                                        
                                     </ul>
+
+                                    <button class="btn btn-orange text-white py-3 px-5 mt-2">Explore
+                                            Investments</button>
 
                                 </div>
 
@@ -807,6 +763,72 @@
                         </div>
 
                     </div>
+
+
+                     <div class="tab-pane fade" id="rent">
+                        <div class="row justify-content-between align-content-center align-items-center">
+
+                            <div class="col-lg-6 col-12">
+                                <div class="service-start">
+                                    <h2 class="fw-bold">Premium Rental Properties</h2>
+                                    <p class="mt-3 text-muted">Find your perfect rental home with our extensive
+                                        portfolio of quality properties and personalized service.</p>
+
+                                    <ul class="mt-4 p-0">
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-map-location icon"></i>
+                                            <div class="ms-3">
+                                                <h4 class="fw-bold">Prime Locations</h4>
+                                                <p>Access rentals in the most desirable neighborhoods and communities.
+                                                </p>
+
+
+                                            </div>
+
+                                        </li>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-shield-halved icon"></i>
+                                            <div>
+                                                <h4 class="fw-bold">Verified Properties</h4>
+                                                <p>All our rental properties are thoroughly inspected and verified for
+                                                    quality.</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                                            <div>
+                                                <h4 class="fw-bold">24/7 Support</h4>
+                                                <p>Round-the-clock maintenance and tenant support services.</p>
+                                            </div>
+                                        </li>
+
+                                       
+                                    </ul>
+
+                                     <button class="btn bg-main bg-gradient text-white py-3 px-5 mt-2">Browse
+                                            Rentals</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+
+                                <div class="service-img position-relative">
+                                    <img src="./image/service-img-4.png" alt=" Service Image"
+                                        class="img-fluid service-img rounded-5">
+                                    <p class="badge-left success-rate"><span class="fw-bold text-main">5,000+</span>
+                                        <br />
+                                        Available Rentals
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+
+
                     <div class="tab-pane fade" id="commercial">
                         <div class="row justify-content-between align-content-center align-items-center">
 
@@ -817,7 +839,7 @@
                                         investors, and developers.</p>
 
                                     <ul class="mt-4 p-0">
-                                        <li class="d-flex align-items-center"> <i class="fa-solid fa-search icon"></i>
+                                        <li class="d-flex align-items-start"> <i class="fa-solid fa-building icon icon-blue"></i>
                                             <div class="ms-3">
                                                 <h4 class="fw-bold">Office Spaces</h4>
                                                 <p>Prime office locations for businesses of all sizes and industries.
@@ -827,25 +849,26 @@
                                             </div>
 
                                         </li>
-                                        <li class="d-flex align-items-center"> <i
-                                                class="fa-solid fa-calculator icon"></i>
+                                        <li class="d-flex align-items-start"> <i
+                                                class="fa-solid fa-warehouse icon icon-blue"></i>
                                             <div>
                                                 <h4 class="fw-bold">Industrial Properties</h4>
                                                 <p>Warehouses, manufacturing facilities, and distribution centers.</p>
                                             </div>
                                         </li>
 
-                                        <li class="d-flex align-items-center"> <i
-                                                class="fa-solid fa-handshake icon"></i>
+                                        <li class="d-flex align-items-start"> <i
+                                                class="fa-solid fa-store icon icon-blue"></i>
                                             <div>
                                                 <h4 class="fw-bold">Retail Spaces</h4>
                                                 <p>High-traffic retail locations and shopping center opportunities.</p>
                                             </div>
                                         </li>
 
-                                        <button class="btn bg-main bg-gradient text-white py-3 px-5 mt-2">View
-                                            Commercial Properties </button>
+                                        
                                     </ul>
+                                    <button class="btn bg-main btn-blue text-white py-3 px-5 mt-2">View
+                                            Commercial Properties </button>
 
                                 </div>
 
@@ -883,6 +906,7 @@
 
 
     </section>
+
 
 
 
@@ -1145,7 +1169,7 @@
 
 
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#testimonialCarousel"
                     data-bs-slide="prev">
 
                     <span class="carousel-control-prev-icon"></span>
@@ -1158,7 +1182,7 @@
 
 
 
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                <button class="carousel-control-next d-none  d-lg-flex" type="button" data-bs-target="#testimonialCarousel"
                     data-bs-slide="next">
 
                     <span class="carousel-control-next-icon"></span>
@@ -1168,9 +1192,10 @@
                     </span>
 
                 </button>
+               
 
 
-                <!-- Indicators -->
+                
                 <div class="carousel-indicators">
 
                     <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
@@ -1188,6 +1213,8 @@
                 </div>
 
             </div>
+
+             
 
         </div>
 
@@ -1378,7 +1405,7 @@
 
 
 
-    <section id="contact" class="py-5">
+    <section id="contact" class="contact position-relative overflow-hidden py-5">
 
         <div class="container">
 
@@ -1830,20 +1857,20 @@
     <section id="footer" class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col md-4">
+                <div class="col-lg-4 col-md-3 col-12">
                     <div class="footer-logo">
                         <h3 class="text-white"> EliteHomes</h3>
                     </div>
                 </div>
-                <div class="col md-4">
+                <div class="col-lg-4 col-md-4 col-12">
                     <div class="copyright">
                         <p class=" text-center"> &copy; 2025 EliteHomes. All rights reserved.
                         </p>
                     </div>
 
                 </div>
-                <div class="col md-4">
-                    <div class="footer-social">
+                <div class="col-lg-4 col-md-5 col-12">
+                    <div class="footer-social text-center">
                         <ul class="d-flex align-items-center justify-content-end">
                             <li><a href="#"><i class="fa-brands fa-facebook-f me-3 text-white"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-twitter me-3 text-white"></i></a></li>
