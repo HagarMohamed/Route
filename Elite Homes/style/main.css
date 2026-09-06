@@ -111,18 +111,21 @@ img {
 
 
 
-
 /******* Hero Section Styles ********/
 
 
 .hero-section{
-     background : linear-gradient(90deg, rgba(80, 0, 220, .85), rgba(120,40, 230, .7)), url('../image/hero-bg-img.png');
+     background : linear-gradient(90deg, rgba(80, 0, 220, .85), rgba(120,40, 230, .7)),
+      url('../image/hero-bg-img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;
+   
+  
 }
 
 
